@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 package Views;
+
 import Controllers.FlightController;
+import java.util.Scanner;
+
 /**
  *
  * @author Daniel Murphy
  */
-public class ScheduleFlightView extends View {
-    
-    public ScheduleFlightView(FlightController controller){
-        this.controller = controller;
-    }
-    
-    public void RenderView(){
-        
-    }
+public abstract class View {
+    protected FlightController controller;
+    protected Scanner scanner = new Scanner(System.in);
+    public abstract void RenderView();
+   
 }

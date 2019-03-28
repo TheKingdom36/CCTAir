@@ -11,21 +11,21 @@ import java.util.Scanner;
  * @author Daniel Murphy
  */
 public class FeatureMenu {
-    ArrayList<IFeature> menuItems;
+    ArrayList<Feature> menuItems;
     
     Scanner kboard = new Scanner(System.in);
     public FeatureMenu(){
-        menuItems = new ArrayList<IFeature>();
+        menuItems = new ArrayList<Feature>();
    
     }
     
    
-    public void AddItem(IFeature menuItem){
+    public void AddItem(Feature menuItem){
         menuItems.add(menuItem);
     }
     
    
-    public void RemoveItem(IFeature menuItem){
+    public void RemoveItem(Feature menuItem){
         menuItems.remove(menuItem);
        
     }
@@ -35,7 +35,7 @@ public class FeatureMenu {
         for(int i=0; i< this.menuItems.size();i++){
             
             System.out.print(i+1 + ". ");
-            System.out.print(this.menuItems.get(i).GetName());
+            System.out.println(this.menuItems.get(i).GetName());
         }
         
         HandleInput(kboard.nextInt());

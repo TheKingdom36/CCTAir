@@ -4,39 +4,53 @@
  * and open the template in the editor.
  */
 package Views;
-import Controllers.CreateFlightController;
+import Controllers.FlightController;
 import Models.Flight;
+import Models.AirPlane;
 import java.util.Scanner;
-
-public class CreateFlightView implements IView {
-    CreateFlightController controller;
-    Scanner scanner = new Scanner(System.in);
-    public CreateFlightView(CreateFlightController controller){
+import java.util.ArrayList;
+public class CreateFlightView extends View {
+    ArrayList<AirPlane> airPlanes;
+    
+    public CreateFlightView(FlightController controller){
         this.controller = controller;
+        airPlanes = controller.GetAirplanes();
     }
     
     public void RenderView(){
-        Flight flight = new Flight();
+        System.out.println("//////////////////////////////////////////////////////////////////////////");
         
-        //do{
+        Flight flight = new Flight();
+        int EnteredValue=0;
+        do{
             //TODO Ask user for all the input
-            System.out.println("Enetr you flight desination");
+            System.out.println("Enter you flight desination");
             
+            flight.setDestination(this.scanner.nextLine());
             
-            System.out.println("Choose your aireplane the options are");            
+            System.out.println("Select aircraft from menu");
+            PrintList(airPlanes);
+            do{
+                EnteredValue = this.scanner.nextInt();
+            }while(EnteredValue > airPlanes.size());
+            
+            flight.setAircraftAssigned(airPlanes.get(EnteredValue-1));
+            
+            System.out.println("");
             
             
             System.out.println("Ill good");
         
             
-       // }while( controller.AddFlight(flight) == false);
-       
+        }while( controller.AddFlight(flight) == false);
+         System.out.println("//////////////////////////////////////////////////////////////////////////");
         
-       
-        
-        
-        
-        
+    }
+    
+    public void PrintList(ArrayList<AirPlane> items){
+        for(int i=0; i<items.size();i++){
+            System.out.println(i+1 + ". " +items.get(i).toString());
+        }
     }
     
    

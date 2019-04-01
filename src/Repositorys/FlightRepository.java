@@ -22,9 +22,16 @@ public class FlightRepository extends BasicRepository<Flight>{
      this.items = new ArrayList<>(); 
     }
     
+    public void FlightsRepository(String path){
+        CreateFromFile(path);
+    }
+    
     
     public void CommitToFile(String path){
         //TODO Figure out how to put items in file
     }
     
+     public void CreateFromFile(String path){
+        //TODO figure out how to read items from file
+    }
 }

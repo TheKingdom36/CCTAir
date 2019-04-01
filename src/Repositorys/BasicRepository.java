@@ -42,4 +42,6 @@ public abstract class BasicRepository<T> implements IRepository<T>{
     }
     
     public abstract void CommitToFile(String path);
+    
+    public abstract void CreateFromFile(String path);
 }

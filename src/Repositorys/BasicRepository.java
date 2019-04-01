@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.io.File;
  
 /**
  *
@@ -41,5 +41,5 @@ public abstract class BasicRepository<T> implements IRepository<T>{
         return items;
     }
     
-    public abstract void CommitToFile();
+    public abstract void CommitToFile(String path);
 }

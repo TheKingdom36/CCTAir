@@ -23,7 +23,7 @@ public class PilotRepository extends BasicRepository<Pilot>{
     }
     
     
-    public void CommitToFile(){
+    public void CommitToFile(String path){
         //TODO Figure out how to put items in file
     }
     

@@ -6,6 +6,7 @@
 package Menu;
 import java.util.ArrayList;
 import java.util.Scanner;
+import Input.IntegerAsker;
 /**
  *
  * @author Daniel Murphy
@@ -13,24 +14,34 @@ import java.util.Scanner;
 public class FeatureMenu {
     ArrayList<Feature> menuItems;
     
-    Scanner kboard = new Scanner(System.in);
+    IntegerAsker integerAsker = new IntegerAsker(System.in,System.out);
     public FeatureMenu(){
         menuItems = new ArrayList<Feature>();
    
     }
     
-   
+   /**
+    *Adds feature to the FeatureMenu
+    * 
+    * @param menuItem feature to be added to the FeatureMenu
+    */
     public void AddItem(Feature menuItem){
         menuItems.add(menuItem);
     }
     
-   
+   /**
+    *Removes feature from the FeatureMenu
+    * 
+    * @param menuItem feature to be removed from the FeatureMenu
+    */
     public void RemoveItem(Feature menuItem){
         menuItems.remove(menuItem);
        
     }
     
-    
+    /**
+     *Generates the view for the featureMenu
+     */
     public void RenderView(){
         for(int i=0; i< this.menuItems.size();i++){
             
@@ -38,10 +49,15 @@ public class FeatureMenu {
             System.out.println(this.menuItems.get(i).GetName());
         }
         
-        HandleInput(kboard.nextInt());
+        HandleInput(integerAsker.ask(""));
         
     }
     
+    /**
+     *Handles the user input for the feature menu
+     * 
+     * @param value user input 
+     */
     private void HandleInput(int value){
     
         int MenuItemPos = value - 1; //Accessing an arrayList which starts at 0 

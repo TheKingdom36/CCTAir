@@ -5,16 +5,22 @@
  */
 package Views;
 
+import Input.IntegerAsker;
+import Input.StringAsker;
 import Controllers.FlightController;
-import java.util.Scanner;
+
 
 /**
  *
  * @author Daniel Murphy
  */
 public abstract class View {
+
+    protected String name;
+    protected StringAsker StringAsker = new StringAsker(System.in,System.out);
+    protected IntegerAsker IntegerAsker = new IntegerAsker(System.in,System.out);
+    
     protected FlightController controller;
-    protected Scanner scanner = new Scanner(System.in);
     public abstract void RenderView();
    
 }

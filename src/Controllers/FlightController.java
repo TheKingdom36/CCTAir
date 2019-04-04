@@ -45,11 +45,9 @@ public class FlightController {
     }
      
      public boolean UpdateFlight(String id,Flight flight){
-        flights.UpdateItem(id, flight);
-        UpdateRecordInFile(flight);
-        
+       
         if(ValidateFlight(flight) == true){
-            flights.AddItem(flight);
+            flights.UpdateItem(id, flight);
             UpdateRecordInFile(flight);
             return true;
         }else{
@@ -59,11 +57,13 @@ public class FlightController {
     
   
     
-    private boolean ValidateFlight(Flight flight){
-    
-        return true;
+    public ArrayList<AirPlane> GetAirplanes(){
+        return this.airPlanes.GetList();
     }
     
+    public ArrayList<Pilot> GetPliots(){
+        return this.pilots.GetList();
+    }
     
     private void UpdateRecordInFile(Flight flight){
         
@@ -73,11 +73,9 @@ public class FlightController {
     
     }
     
-    public ArrayList<AirPlane> GetAirplanes(){
-        return this.airPlanes.GetList();
-    }
+     private boolean ValidateFlight(Flight flight){
     
-    public ArrayList<Pilot> GetPliots(){
-        return this.pilots.GetList();
+        
+        return true;
     }
 }

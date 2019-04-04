@@ -5,7 +5,6 @@
  */
 package Menu;
 import java.util.ArrayList;
-import java.util.Scanner;
 import Input.IntegerAsker;
 /**
  *
@@ -16,7 +15,7 @@ public class FeatureMenu {
     
     IntegerAsker integerAsker = new IntegerAsker(System.in,System.out);
     public FeatureMenu(){
-        menuItems = new ArrayList<Feature>();
+        menuItems = new ArrayList<>();
    
     }
     

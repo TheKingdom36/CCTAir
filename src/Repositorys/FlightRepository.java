@@ -22,7 +22,7 @@ public class FlightRepository extends TextFileRepository<Flight>{
      this.items = new ArrayList<>(); 
     }
     
-    public void FlightRepository(String path){
+    public FlightRepository(String path){
         this.items = new ArrayList<>(); 
         this.FilePath = path;
         CreateFromFile(FilePath);

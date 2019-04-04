@@ -23,7 +23,7 @@ public class PilotRepository extends TextFileRepository<Pilot>{
      
     }
     
-    public void PilotRepository(String path){
+    public PilotRepository(String path){
         this.items = new ArrayList<>(); 
         this.FilePath = path;
         CreateFromFile(FilePath);

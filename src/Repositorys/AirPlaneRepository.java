@@ -17,12 +17,12 @@ import java.io.IOException;
  */
 public class AirPlaneRepository extends TextFileRepository<AirPlane>{
     
-    public void AirPaneRepository()
+    public void AirPlaneRepository()
     {
      this.items = new ArrayList<>(); 
     }
     
-    public void AirPlaneRepository(String path){
+    public AirPlaneRepository(String path){
         this.items = new ArrayList<>(); 
         this.FilePath = path;
         CreateFromFile(this.FilePath);

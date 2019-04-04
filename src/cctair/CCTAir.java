@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package cctair;
-import java.util.Scanner;
 import Menu.*;
 import Models.*;
 import Repositorys.*;
@@ -21,30 +20,17 @@ public class CCTAir {
      */
     public static void main(String[] args) {
         
-        Scanner kboard = new Scanner(System.in);
         
         User admin = new User("Damiel","001");
-        int max = 5;
      
         FeatureMenu menu = new FeatureMenu();
         
-        IRepository<Flight> flightRepository = new FlightRepository() ;
+        //Create from file
+        IRepository<Flight> flightRepository = new FlightRepository("Flights.txt") ;
         
-        IRepository<Pilot> pilotRepository = new PilotRepository();
+        IRepository<Pilot> pilotRepository = new PilotRepository("Pilots.txt");
         
-        //just for testing created a few pilots
-        pilotRepository.AddItem(new Pilot("Murphy","Daniel","Skilled",32,true));
-         pilotRepository.AddItem(new Pilot("Murphy","Dean","verySkilled",62,true));
-          pilotRepository.AddItem(new Pilot("Gregan","Stephan","Skilled",42,false));
-        
-        IRepository<AirPlane> airPlaneRepository = new AirPlaneRepository();
-                    
-               
-                        
-        //Just for testing created a few airplanes
-       airPlaneRepository.AddItem(new AirPlane("Boeing", 747, 500, pilotRepository.GetList().get(0)));
-        airPlaneRepository.AddItem(new AirPlane("Boeing", 7, 100, pilotRepository.GetList().get(1)));
-         airPlaneRepository.AddItem(new AirPlane("jet", 4, 200, pilotRepository.GetList().get(2)));
+        IRepository<AirPlane> airPlaneRepository = new AirPlaneRepository("AirPlanes.txt");
         
         FlightController flightController = new FlightController(flightRepository ,airPlaneRepository,pilotRepository);
         
@@ -58,7 +44,6 @@ public class CCTAir {
             menu.RenderView();
         }while(true);
          
-      
 
     }
 }

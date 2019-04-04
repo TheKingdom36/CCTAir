@@ -26,6 +26,7 @@ public class CreateFlightView extends View {
         System.out.println("//////////////////////////////////////////////////////////////////////////");
         System.out.println(this.name);
         
+        int MinFlightDay = 1;
         Flight flight = new Flight();
        
         do{
@@ -51,10 +52,10 @@ public class CreateFlightView extends View {
             
             PrintList(dataStore.Months);
             System.out.print("Month: ");
-            Date += (dataStore.Months[GetValidInt(1,dataStore.Months.length)-1]);
+            Date += (dataStore.Months[GetValidInt(MinFlightDay,dataStore.Months.length)-1]);
             
             System.out.print("Day: ");
-            Date += ( GetValidInt(1,dataStore.NumDaysPerMonth.get(Date)) + "/");
+            Date += ( GetValidInt(MinFlightDay,dataStore.NumDaysPerMonth.get(Date)) + "/");
             
             
             Date += (StringAsker.ask("Year: "));
@@ -101,5 +102,4 @@ public class CreateFlightView extends View {
         return EnteredValue;
     }
     
-   
 }

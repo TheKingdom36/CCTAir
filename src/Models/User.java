@@ -36,8 +36,8 @@ public class User {
             
            
        public void example(){
-           public int dragon;
-           private int dk;
+          
+          
        }
             
 }

@@ -15,7 +15,7 @@ import java.io.IOException;
  *
  * @author Daniel Murphy
  */
-public class FlightRepository extends BasicRepository<Flight>{
+public class FlightRepository extends TextFileRepository<Flight>{
     
     public void FlightsRepository()
     {
@@ -23,15 +23,31 @@ public class FlightRepository extends BasicRepository<Flight>{
     }
     
     public void FlightRepository(String path){
-        CreateFromFile(path);
+        this.items = new ArrayList<>(); 
+        this.FilePath = path;
+        CreateFromFile(FilePath);
+    }
+    
+    @Override
+    public void UpdateItem(String id, Flight item) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
-    public void CommitToFile(String path){
+    @Override
+    protected void CommitItemToFile(String path,Flight flight){
         //TODO Figure out how to put items in file
     }
     
-     public void CreateFromFile(String path){
+    @Override
+     protected void CreateFromFile(String path){
         //TODO figure out how to read items from file
     }
+
+    @Override
+    protected void UpdateItemInFile(String path,String id) {
+        //TODO Figure out how to update a single flight entry
+    }
+
+    
 }

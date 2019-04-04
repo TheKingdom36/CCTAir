@@ -15,24 +15,40 @@ import java.io.IOException;
  *
  * @author Daniel Murphy
  */
-public class PilotRepository extends BasicRepository<Pilot>{
+public class PilotRepository extends TextFileRepository<Pilot>{
     
     public void PilotRepository()
     {
      this.items = new ArrayList<>(); 
+     
     }
     
     public void PilotRepository(String path){
-        CreateFromFile(path);
+        this.items = new ArrayList<>(); 
+        this.FilePath = path;
+        CreateFromFile(FilePath);
     }
     
+    @Override
+    public void UpdateItem(String id, Pilot item) {
+   
+    }
     
-    public void CommitToFile(String path){
+     @Override
+    protected void CommitItemToFile(String path , Pilot pilot){
         //TODO Figure out how to put items in file
     }
     
-     public void CreateFromFile(String path){
+     @Override
+     protected void CreateFromFile(String path){
         //TODO figure out how to read items from file
     }
+
+    @Override
+    protected void UpdateItemInFile(String path, String id) {
+   
+    }
+
+    
     
 }

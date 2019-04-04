@@ -14,6 +14,4 @@ public interface IRepository<T> {
     void RemoveItem(T t);
     void UpdateItem(String id ,T t);
     ArrayList<T> GetList();
-    void CommitToFile(String path);
-    void CreateFromFile(String path);
 }

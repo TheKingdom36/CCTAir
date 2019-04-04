@@ -20,18 +20,18 @@ public class DataStore {
     public HashMap<String,Integer> NumDaysPerMonth = new HashMap<>();
     
     public DataStore(){
-        NumDaysPerMonth.put("January", 30);
+        NumDaysPerMonth.put("January", 31);
          NumDaysPerMonth.put("February", 30);
-          NumDaysPerMonth.put("March", 30);
+          NumDaysPerMonth.put("March", 31);
            NumDaysPerMonth.put("April", 30);
-            NumDaysPerMonth.put("May", 30);
+            NumDaysPerMonth.put("May", 31);
              NumDaysPerMonth.put("June", 30);
-              NumDaysPerMonth.put("July", 30);
-               NumDaysPerMonth.put("August", 30);
+              NumDaysPerMonth.put("July", 31);
+               NumDaysPerMonth.put("August", 31);
                 NumDaysPerMonth.put("September", 30);
-                 NumDaysPerMonth.put("October", 30);
+                 NumDaysPerMonth.put("October", 31);
                   NumDaysPerMonth.put("November", 30);
-                    NumDaysPerMonth.put("December", 30);
+                    NumDaysPerMonth.put("December", 31);
         
     
     }

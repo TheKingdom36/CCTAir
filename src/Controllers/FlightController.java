@@ -35,7 +35,6 @@ public class FlightController {
         
         if(ValidateFlight(flight) == true){
             flights.AddItem(flight);
-            CommitFlightToFile(flight);
             return true;
         }else{
             return false;
@@ -48,14 +47,12 @@ public class FlightController {
        
         if(ValidateFlight(flight) == true){
             flights.UpdateItem(id, flight);
-            UpdateRecordInFile(flight);
             return true;
         }else{
             return false;
         }
     }
     
-  
     
     public ArrayList<AirPlane> GetAirplanes(){
         return this.airPlanes.GetList();
@@ -65,17 +62,8 @@ public class FlightController {
         return this.pilots.GetList();
     }
     
-    private void UpdateRecordInFile(Flight flight){
-        
-    }
-    
-    private void CommitFlightToFile(Flight flight){
-    
-    }
     
      private boolean ValidateFlight(Flight flight){
-    
-        
         return true;
     }
 }

@@ -15,7 +15,7 @@ import java.io.IOException;
  *
  * @author Daniel Murphy
  */
-public class AirPlaneRepository extends BasicRepository<AirPlane>{
+public class AirPlaneRepository extends TextFileRepository<AirPlane>{
     
     public void AirPaneRepository()
     {
@@ -23,17 +23,32 @@ public class AirPlaneRepository extends BasicRepository<AirPlane>{
     }
     
     public void AirPlaneRepository(String path){
-        CreateFromFile(path);
+        this.items = new ArrayList<>(); 
+        this.FilePath = path;
+        CreateFromFile(this.FilePath);
+    }
+    
+     @Override
+    public void UpdateItem(String id, AirPlane item) {
     }
     
     
-    
-    public void CommitToFile(String path){
+    @Override
+    protected void CommitItemToFile(String path,AirPlane airplane){
         //TODO Figure out how to put items in file
     }
     
-    public void CreateFromFile(String path){
+    @Override
+    protected void CreateFromFile(String path){
         //TODO figure out how to read items from file
+      
     }
+
+    @Override
+    protected void UpdateItemInFile(String path ,String id) {
+   
+    }
+
+   
     
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Repositorys;
+
 import java.util.ArrayList;
 
 import java.io.FileNotFoundException;
@@ -45,7 +46,9 @@ public abstract class TextFileRepository<T> implements IRepository<T>{
  * @param id  The id of the item to be updated
  * @param item  The updated item 
  */
-    public abstract void UpdateItem(String id, T item);
+    public void UpdateItem(String id, T item){
+        //Do Nothing
+    };
     
 /**
  *Returns an arrayList with all items in the repository
@@ -55,13 +58,7 @@ public abstract class TextFileRepository<T> implements IRepository<T>{
         return items;
     }
 
-    /**
-     *Commits an item within the repository to a file
-     * @param path  The file path of where the repository items are held
-     * @parem item The item to be commited to a file
-     */
-    protected abstract void CommitItemToFile(String path,T item);
-    
+   
     /**
      *Takes in items from a file and adds them to the repository
      * @param path  The file path of where the repository items are to be held
@@ -69,9 +66,15 @@ public abstract class TextFileRepository<T> implements IRepository<T>{
     protected abstract void CreateFromFile(String path);
     
     /**
-     *Updates a single item within the repository
-     * @param path The file path where the repository items are held
-     * @param id  The id of the item to be updated 
+     *Commits an item within the repository to a file
+     * @param path  The file path of where the repository items are held
+     * @parem item The item to be commited to a file
      */
-    protected abstract void UpdateItemInFile(String path ,String id); 
+    protected void CommitItemToFile(String path,T t){
+        //Do Nothing
+    };
+    
+    protected void UpdateItemInFile(String path, String id){
+    
+    }
 }

@@ -38,9 +38,21 @@ public class FlightController {
             return true;
         }else{
             return false;
+        }  
+    }
+    
+     public ArrayList<Flight> FindFlights(String Origin){
+        ArrayList<Flight> MatchingFlights = new ArrayList<Flight>();
+        ArrayList<Flight> AvailableFlights = flights.GetList();
+        
+        for(int i=0; i<AvailableFlights.size();i++){
+            if(Origin.equals(AvailableFlights.get(i).getOrigin())){
+                MatchingFlights.add(AvailableFlights.get(i));
+            }
+            
         }
         
-        
+        return MatchingFlights;
     }
      
      public boolean UpdateFlight(String id,Flight flight){

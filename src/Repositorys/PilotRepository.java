@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 package Repositorys;
+import Models.AirPlane;
 import java.util.ArrayList;
 import Models.Pilot;
+import com.google.gson.Gson;
+import java.io.BufferedReader;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -29,6 +32,8 @@ public class PilotRepository extends TextFileRepository<Pilot>{
         CreateFromFile(FilePath);
     }
     
+    
+    
     @Override
     public void UpdateItem(String id, Pilot item) {
    
@@ -41,7 +46,21 @@ public class PilotRepository extends TextFileRepository<Pilot>{
     
      @Override
      protected void CreateFromFile(String path){
-        //TODO figure out how to read items from file
+        
+          Gson gs = new Gson();
+        BufferedReader reader = null;
+        try{
+            reader = new BufferedReader(new FileReader(path)); 
+              
+            Pilot[] pilots = gs.fromJson(reader, Pilot[].class);
+            System.out.print("dk");
+            for(Pilot p : pilots){
+                items.add(p);
+            }
+        }catch(Exception e){
+           System.out.print(e.toString());
+        }
+         
     }
 
     @Override

@@ -8,6 +8,7 @@ package Views;
 import Input.IntegerAsker;
 import Input.StringAsker;
 import Controllers.FlightController;
+import java.util.ArrayList;
 
 
 /**
@@ -22,5 +23,17 @@ public abstract class View {
     
     protected FlightController controller;
     public abstract void RenderView();
+    
+    public <T> void PrintList(ArrayList<T> items){
+        for(int i=0; i<items.size();i++){
+            System.out.println(i+1 + ". " +items.get(i).toString());
+        }
+    }
+    
+    public <T> void PrintList(T[] items){
+        for(int i=0; i<items.length;i++){
+            System.out.println(i+1 + ". " +items[i].toString());
+        }
+    }
    
 }

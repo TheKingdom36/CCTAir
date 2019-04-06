@@ -9,6 +9,10 @@ import Models.*;
 import Repositorys.*;
 import Controllers.FlightController;
 import Views.*;
+import com.google.gson.Gson;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
 /**
  *
  * @author Daniel Murphy
@@ -21,50 +25,29 @@ public class CCTAir {
     public static void main(String[] args) {
         
         
-        User admin = new User("Damiel","001");
+        User user = new User("Mark","001");
      
         FeatureMenu menu = new FeatureMenu();
         
         //Create from file
-        IRepository<Flight> flightRepository = new FlightRepository("Flights.txt") ;
-        
+        IRepository<Flight> flightRepository = new FlightRepository("Flights.json") ;
         IRepository<Pilot> pilotRepository = new PilotRepository("Pilots.txt");
+        IRepository<AirPlane> airPlaneRepository = new AirPlaneRepository("airplanes.txt");
         
-        IRepository<AirPlane> airPlaneRepository = new AirPlaneRepository("AirPlanes.txt");
         
         FlightController flightController = new FlightController(flightRepository ,airPlaneRepository,pilotRepository);
         
-        menu.AddItem(new Feature(new CreateFlightView(flightController),"Create Flight"));
+        menu.AddItem(new Feature(new CreateFlightView(flightController,user),"Create Flight"));
         menu.AddItem(new Feature(new ScheduleFlightView(flightController),"Schedule Flight"));
         menu.AddItem(new Feature(new ListFlightsView(flightController),"List Flights"));
         
-        
-        do{ 
+            
+        do{   
             System.out.println("//////////////////////////////////////////////////////////////////////////");
             menu.RenderView();
         }while(true);
          
 
     }
+    
 }
-
-
-/*
-    do{
-            int valueEntered = kboard.nextInt();
-            if(valueEntered == 1){
-           if(admin.getNumberOfFightsEntered() < max ){
-                //Increse Number of flights entered for user
-            //print number of flights enterd by user  
-               
-           }
-           
-            
-        
-            }else {
-            //print number of flights enterd by user            
-        
-            } 
-            
-        }while(true); //admin.getNumOfFLightsEntered < 5
-    */

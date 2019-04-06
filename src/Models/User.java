@@ -25,10 +25,15 @@ public class User {
         
     }
     
-   
+    
     public String getName(){
         return name; 
-    }  
+    }
+    
+    public int getNumberOfFlightsEntered(){
+        return this.numOfFlightsEntered;
+    }
+    
             
        public void IncreaseNumberOfFlightsEntered(){
            numOfFlightsEntered++;

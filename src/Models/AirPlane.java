@@ -12,14 +12,14 @@ package Models;
 public class AirPlane
 {
     private String make;
-    private int model;
+    private String model;
     private int capacity;
     private Pilot pilot;
     
     public AirPlane()
     {}
     
-    public AirPlane(String make, int model, int capacity, Pilot pilot)
+    public AirPlane(String make, String model, int capacity, Pilot pilot)
     {
         this.make       = make;
         this.model      = model;
@@ -32,7 +32,7 @@ public class AirPlane
         return make;
     }
 
-    public int getModel()
+    public String getModel()
     {
         return model;
     }
@@ -52,7 +52,7 @@ public class AirPlane
         this.make = make;
     }
 
-    public void setModel(int model)
+    public void setModel(String model)
     {
         this.model = model;
     }

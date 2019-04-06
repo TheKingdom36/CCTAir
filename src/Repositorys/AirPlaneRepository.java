@@ -6,10 +6,12 @@
 package Repositorys;
 import java.util.ArrayList;
 import Models.AirPlane;
-
+import com.google.gson.Gson;
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
  
 /**
  *
@@ -17,9 +19,11 @@ import java.io.IOException;
  */
 public class AirPlaneRepository extends TextFileRepository<AirPlane>{
     
+    public ArrayList<AirPlane> airplanes;
     public void AirPlaneRepository()
     {
      this.items = new ArrayList<>(); 
+    
     }
     
     public AirPlaneRepository(String path){
@@ -27,28 +31,29 @@ public class AirPlaneRepository extends TextFileRepository<AirPlane>{
         this.FilePath = path;
         CreateFromFile(this.FilePath);
     }
-    
-     @Override
-    public void UpdateItem(String id, AirPlane item) {
+    public ArrayList<AirPlane> listt(){
+        return airplanes;
     }
     
-    
-    @Override
-    protected void CommitItemToFile(String path,AirPlane airplane){
-        //TODO Figure out how to put items in file
-    }
     
     @Override
     protected void CreateFromFile(String path){
-        //TODO figure out how to read items from file
-      
+        
+        Gson gs = new Gson();
+        BufferedReader reader = null;
+        try{
+            reader = new BufferedReader(new FileReader("airplanes.json")); 
+              
+            AirPlane[] airPlanes = gs.fromJson(reader, AirPlane[].class);
+            for(AirPlane a : airPlanes){
+                items.add(a);
+            }
+        }catch(Exception e){
+           System.out.print(e.toString());
+        }
     }
 
-    @Override
-    protected void UpdateItemInFile(String path ,String id) {
-   
-    }
 
-   
+    
     
 }

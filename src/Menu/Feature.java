@@ -15,7 +15,7 @@ public class Feature {
   
     protected String ItemName;
     protected View view;
-      
+    public boolean IsActive;
        
     public Feature(View view , String ItemName){
        this.ItemName = ItemName;

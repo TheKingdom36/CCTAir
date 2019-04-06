@@ -90,10 +90,7 @@ public class Flight
         this.departureTime = departureTime;
     }
 
-    public void setArrivalTime(String arrivalTime)
-    {
-        this.arrivalTime = arrivalTime;
-    }
+   
 
     public void setDateOfFlight(String dateOfFlight)
     {
@@ -105,14 +102,15 @@ public class Flight
         this.aircraftAssigned = aircraftAssigned;
     }
     
-    public void Schedule(String arrivalTIme)
+    public void Schedule(String arrivalTime)
     {
-    
+        this.arrivalTime = arrivalTime;
     }
     
     public void Schedule(String arrivalTime, String departureTime)
     {
-        
+        this.arrivalTime = arrivalTime;
+        this.departureTime = departureTime;
     }
     
     public void UserAddFlight()

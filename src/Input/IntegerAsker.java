@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * 
  */
 
 package Input;
@@ -18,6 +16,11 @@ public class IntegerAsker {
         this.out = out;
     }
 
+    /**
+     *Returns an int which is inputed by the user
+     * 
+     * @param message This is a message which will be displayed to the user
+     */
     public int ask(String message) {
        
         System.out.print(message);

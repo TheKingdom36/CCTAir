@@ -5,83 +5,48 @@
  */
 package Models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+
 /**
  *
  * @author Stephen
  */
-public class AirPlane
+// Aircraft class is optional!!
+public class AirPlane extends Aircraft
 {
-    private String make;
-    private String model;
-    private int capacity;
-    private Pilot pilot;
-    
-    public AirPlane()
-    {}
-    
-    public AirPlane(String make, String model, int capacity, Pilot pilot)
+    @SerializedName("airplanes")
+    @Expose
+    private List<AirPlane> airplanes = null;
+
+    public List<AirPlane> getAirplanes()
     {
-        this.make       = make;
-        this.model      = model;
-        this.capacity   = capacity;
-        this.pilot      = pilot;
+        return airplanes;
     }
 
-    public String getMake()
+    public void setAirplanes(List<AirPlane> airplanes)
     {
-        return make;
+        this.airplanes = airplanes;
     }
 
-    public String getModel()
-    {
-        return model;
-    }
 
-    public int getCapacity()
-    {
-        return capacity;
-    }
-
-    public Pilot getPilot()
-    {
-        return pilot;
-    }
-
-    public void setMake(String make)
-    {
-        this.make = make;
-    }
-
-    public void setModel(String model)
-    {
-        this.model = model;
-    }
-
-    public void setCapacity(int capacity)
-    {
-        this.capacity = capacity;
-    }
-
-    public void setPilot(Pilot pilot)
-    {
-        this.pilot = pilot;
-    }
-    
-    public Pilot AssignPilot(Pilot pilot)
-    {
-        return pilot;
-    }
-
+    // String.Format:  Is this the correct format?? Make sure!!!
     @Override
     public String toString()
     {
-        return String.format("Airplane Information: Aircraft: %s %s Capacity: %d seats, Pilot: %s", make, model, capacity, pilot);
+        return String.format("Airplane Information: Aircraft: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot());
         // return " Airplane Information: AirCraft: " + make + " " + model + ", Capacity: " + capacity + " seats, Pilot: " + pilot + '}';
     }
     
-}
+    
   
     
     
+    
+    
+    
+}
+
     
     

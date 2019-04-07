@@ -9,10 +9,7 @@ import Models.*;
 import Repositorys.*;
 import Controllers.FlightController;
 import Views.*;
-import com.google.gson.Gson;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.ArrayList;
+
 /**
  *
  * @author Daniel Murphy
@@ -30,12 +27,12 @@ public class CCTAir {
         FeatureMenu menu = new FeatureMenu();
         
         //Create from file
-        IRepository<Flight> flightRepository = new FlightRepository("Flights.json") ;
-        IRepository<Pilot> pilotRepository = new PilotRepository("Pilots.txt");
-        IRepository<AirPlane> airPlaneRepository = new AirPlaneRepository("airplanes.txt");
+        IRepository<Flight> flightRepository = new FlightRepository("flights.json") ;
+        IRepository<Pilot> pilotRepository = new PilotRepository("pilots.json");
+        IRepository<Aircraft> aircraftRepository = new AircraftRepository("airplanes.json");
         
         
-        FlightController flightController = new FlightController(flightRepository ,airPlaneRepository,pilotRepository);
+        FlightController flightController = new FlightController(flightRepository ,aircraftRepository,pilotRepository);
         
         menu.AddItem(new Feature(new CreateFlightView(flightController,user),"Create Flight"));
         menu.AddItem(new Feature(new ScheduleFlightView(flightController),"Schedule Flight"));

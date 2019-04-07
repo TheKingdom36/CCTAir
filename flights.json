@@ -1,0 +1,31 @@
+
+	[
+		{
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": {
+                "hour":7,
+                "min":67
+            },
+			"arrivalTime": {
+                "hour":4,
+                "min":5
+            },
+			"dateOfFlight": "10/04/2019",
+			"aircraftId": "1"
+		},
+		{
+			"origin": "Dublin",
+			"destination": "France",
+			"departureTime": {
+                "hour":7,
+                "min":67
+            },
+			"arrivalTime": {
+                "hour":4,
+                "min":5
+            },
+			"dateOfFlight": "10/04/2019",
+			"aircraftId": "2"
+		}
+	]

@@ -6,7 +6,7 @@
 package Controllers;
 
 import Models.Flight;
-import Models.AirPlane;
+import Models.Aircraft;
 import Models.Pilot;
 import Repositorys.IRepository;
 import java.util.ArrayList;
@@ -18,19 +18,26 @@ import java.util.ArrayList;
 public class FlightController {
     
     IRepository<Flight> flights;
-    IRepository<AirPlane> airPlanes;
+    IRepository<Aircraft> aircrafts;
     IRepository<Pilot> pilots;
             
-    public FlightController(IRepository<Flight> flights,IRepository<AirPlane> airPlanes,IRepository<Pilot> pilots){
+    public FlightController(IRepository<Flight> flights,IRepository<Aircraft> aircrafts,IRepository<Pilot> pilots){
         this.flights = flights;
-        this.airPlanes = airPlanes;
+        this.aircrafts = aircrafts;
         this.pilots = pilots;
     }
     
+    /**
+     *Returns an arrayList of all flights
+     */
     public ArrayList<Flight> GetFlights(){
          return flights.GetList();
+         
     } 
     
+    /**
+     *Adds a flight to the flights repository if the flight is accepted
+     */
     public boolean AddFlight(Flight flight){
         
         if(ValidateFlight(flight) == true){
@@ -41,6 +48,11 @@ public class FlightController {
         }  
     }
     
+    /**
+     *Returns an ArrayList of flights which the flights origin matchs the String parameter
+     * 
+     * @param Origin The origin of the requested flights
+     */
      public ArrayList<Flight> FindFlights(String Origin){
         ArrayList<Flight> MatchingFlights = new ArrayList<Flight>();
         ArrayList<Flight> AvailableFlights = flights.GetList();
@@ -49,12 +61,16 @@ public class FlightController {
             if(Origin.equals(AvailableFlights.get(i).getOrigin())){
                 MatchingFlights.add(AvailableFlights.get(i));
             }
-            
         }
-        
         return MatchingFlights;
     }
      
+     /**
+      *Updates a flight entry within the repository
+      * 
+      * @param id The id of the flight to be updated
+      * @param flight The new flight information
+      */
      public boolean UpdateFlight(String id,Flight flight){
        
         if(ValidateFlight(flight) == true){
@@ -65,16 +81,25 @@ public class FlightController {
         }
     }
     
-    
-    public ArrayList<AirPlane> GetAirplanes(){
-        return this.airPlanes.GetList();
+    /**
+     *Returns an ArrayList of Airplanes
+     */
+    public ArrayList<Aircraft> GetAircrafts(){
+        return this.aircrafts.GetList();
     }
     
+    /**
+     *Returns an ArrayList of Pilots
+     */
     public ArrayList<Pilot> GetPliots(){
         return this.pilots.GetList();
     }
     
-    
+    /**
+     *Validates that a Flight meets the required information
+     * 
+     * @param flight flight to be validated
+     */
      private boolean ValidateFlight(Flight flight){
         return true;
     }

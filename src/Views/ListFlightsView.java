@@ -16,11 +16,16 @@ public class ListFlightsView extends View {
     public ListFlightsView(FlightController controller){
         this.controller = controller;
     }
+    
+    
+    @Override
     public void RenderView() {
           System.out.println("//////////////////////////////////////////////////////////////////////////");
-        for(Flight f : controller.GetFlights()){
-            System.out.println(f.toString());
-        }
+        System.out.println(controller.GetFlights().size());
+          for(int i=0; i<controller.GetFlights().size();i++){
+              System.out.print(controller.GetFlights().get(i).toString());
+          }
+          
           System.out.println("//////////////////////////////////////////////////////////////////////////");
     }
     

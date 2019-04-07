@@ -20,8 +20,8 @@ public abstract class View {
     protected String name;
     protected StringAsker StringAsker = new StringAsker(System.in,System.out);
     protected IntegerAsker IntegerAsker = new IntegerAsker(System.in,System.out);
-    
     protected FlightController controller;
+    
     public abstract void RenderView();
     
     public <T> void PrintList(ArrayList<T> items){

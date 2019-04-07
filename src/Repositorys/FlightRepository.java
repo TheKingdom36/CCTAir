@@ -8,11 +8,14 @@ import Models.AirPlane;
 import java.util.ArrayList;
 import Models.Flight;
 import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
 import java.io.BufferedReader;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
  
 /**
  *
@@ -41,30 +44,33 @@ public class FlightRepository extends TextFileRepository<Flight>{
      /**
      *Commits an item within the repository to a file
      * @param path  The file path of where the repository items are held
-     * @parem item The item to be commited to a file
+     * @param flight The flight to be commited to a file
+     * 
      */
     @Override
     protected void CommitItemToFile(String path,Flight flight){
         //TODO Figure out how to put items in file
     }
     
+    
     @Override
      protected void CreateFromFile(String path){
         Gson gs = new Gson();
-        BufferedReader reader = null;
+        BufferedReader reader ;
         try{
             reader = new BufferedReader(new FileReader(path)); 
               
             Flight[] flights = gs.fromJson(reader, Flight[].class);
-            for(Flight f : flights){
-                items.add(f);
-            }
-        }catch(Exception e){
+            
+            items.addAll(Arrays.asList(flights));
+            
+        }catch(JsonIOException | JsonSyntaxException | FileNotFoundException e){
            System.out.print(e.toString());
         }
     }
 
     
+    @Override
     protected void UpdateItemInFile(String path,String id) {
         //TODO Figure out how to update a single flight entry
     }

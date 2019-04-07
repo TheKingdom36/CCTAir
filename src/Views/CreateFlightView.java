@@ -7,13 +7,12 @@
 package Views;
 import Controllers.FlightController;
 import Models.Flight;
-import Models.AirPlane;
+import Models.Aircraft;
 import Models.User;
 import java.util.ArrayList;
 import Repositorys.DataStore;
 
 public class CreateFlightView extends View {
-    ArrayList<AirPlane> airPlanes;
     User user;
     
     public CreateFlightView(FlightController controller,User user){
@@ -21,17 +20,10 @@ public class CreateFlightView extends View {
         
         this.user = user;
         
-        airPlanes = controller.GetAirplanes();
+        
         this.name = "Create Flight";
     }
     
-    /*
-    if(Number of flights entered by user is greater then 5){
-            Display saying theu cant enter more flights
-    }else{
-            Display info to create flight
-    }
-    */
     
     @Override
     public void RenderView(){
@@ -51,13 +43,14 @@ public class CreateFlightView extends View {
             do{
 
                 System.out.println("Select aircraft from menu");
-                PrintList(airPlanes);
+                PrintList(controller.GetAircrafts());
 
-                flight.setAircraftAssigned(airPlanes.get(GetValidInt(1,airPlanes.size())-1));
+                flight.setAircraftAssigned(controller.GetAircrafts().get(GetValidInt(1,controller.GetAircrafts().size())-1));
 
-                flight.setDepartureTime(StringAsker.ask("Enter DEPARTURE time"));
+                
+                //flight.setDepartureTime(StringAsker.ask("Enter DEPARTURE time"));
 
-                flight.Schedule(StringAsker.ask("Enter ARRIVAL time"));
+                //flight.Schedule(StringAsker.ask("Enter ARRIVAL time"));
 
                 flight.setOrigin(StringAsker.ask("Enter ORIGIN of flight"));
 
@@ -96,7 +89,12 @@ public class CreateFlightView extends View {
     }
     
     
-    
+    /**
+     *Return an int inputed by the user which is within the range MinValue-MaxValue
+     * 
+     * @param MinValue the minimum value of a valid int
+     * @param MaxValue the maximum value of a valid int
+     */
     
     private int GetValidInt(int MinValue , int MaxValue){
         int EnteredValue=MinValue;

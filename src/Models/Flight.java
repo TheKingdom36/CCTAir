@@ -15,17 +15,20 @@ public class Flight
 {
     private String origin;
     private String destination;
-    private String  departureTime;
-    private String arrivalTime;
+    private Time  departureTime;
+    private Time arrivalTime;
     private String dateOfFlight;
-    private AirPlane aircraftAssigned;
+    private Aircraft aircraftAssigned;
+    
+  
     
     public Flight()
     {
     
     }
 
-    public Flight(String origin, String destination, String dateOfFlight, AirPlane aircraftAssigned)
+
+    public Flight(String origin, String destination, String dateOfFlight, Aircraft aircraftAssigned)
     {
         this.origin = origin;
         this.destination = destination;
@@ -33,7 +36,7 @@ public class Flight
         this.aircraftAssigned = aircraftAssigned;
     }
 
-    public Flight(String origin, String destination, String departureTime, String arrivalTime, String dateOfFlight, AirPlane aircraftAssigned)
+    public Flight(String origin, String destination, Time departureTime, Time arrivalTime, String dateOfFlight, Aircraft aircraftAssigned)
     {
         this.origin = origin;
         this.destination = destination;
@@ -55,12 +58,12 @@ public class Flight
         return destination;
     }
 
-    public String getDepartureTime()
+    public Time getDepartureTime()
     {
         return departureTime;
     }
 
-    public String getArrivalTime()
+    public Time getArrivalTime()
     {
         return arrivalTime;
     }
@@ -70,7 +73,7 @@ public class Flight
         return dateOfFlight;
     }
 
-    public AirPlane getAircraftAssigned()
+    public Aircraft getAircraftAssigned()
     {
         return aircraftAssigned;
     }
@@ -85,7 +88,7 @@ public class Flight
         this.destination = destination;
     }
 
-    public void setDepartureTime(String departureTime)
+    public void setDepartureTime(Time departureTime)
     {
         this.departureTime = departureTime;
     }
@@ -97,81 +100,42 @@ public class Flight
         this.dateOfFlight = dateOfFlight;
     }
 
-    public void setAircraftAssigned(AirPlane aircraftAssigned)
+    public void setAircraftAssigned(Aircraft aircraftAssigned)
     {
         this.aircraftAssigned = aircraftAssigned;
     }
     
-    public void Schedule(String arrivalTime)
+    public void Schedule(Time arrivalTime)
     {
         this.arrivalTime = arrivalTime;
     }
     
-    public void Schedule(String arrivalTime, String departureTime)
+    public void Schedule(Time arrivalTime, Time departureTime)
     {
         this.arrivalTime = arrivalTime;
         this.departureTime = departureTime;
     }
     
-    public void UserAddFlight()
-    {
-        boolean isTrue = false;
-        String[] locationsArray = new String[10];
-        locationsArray[0] = "Dublin";
-        locationsArray[1] = "London";
-        locationsArray[2] = "Paris";
-        locationsArray[3] = "Spain";
-        locationsArray[4] = "Egypt";
-        Scanner userInput = new Scanner(System.in);
-        System.out.println("Please add a flight below:\n ");
-        do
-        {
-            for(String n : locationsArray)
-            {
-                if(n.equalsIgnoreCase(userInput.nextLine()))
-                {
-                    System.out.println("Vaild input");
-                    //isTrue = false;
-                    continue;
-                }
-                System.out.println("Invalid input");
-                break;
-            }
-             
+    
+    
+    
+    public class Time {
+        public int hour;
+        public int min;
+        
+        String ToString(){
+            return hour + ":" +min;
         }
-        while(isTrue = true);
-        
-//        String userOrigin = userInput.nextLine();
-//        do
-//        {
-//            for (String locationsArray1 : locationsArray)
-//            {
-//                if (userOrigin.equalsIgnoreCase(locationsArray1))
-//                {
-//                    System.out.println("Good");
-//                    System.out.printf("You have chosen '%s' as the origin\n", userOrigin);
-//                    continue;
-//                } else
-//                {
-//                    System.out.println("Bad");
-//                }
-//            }
-//            break;
-//        }
-//       
-//        while(isTrue == false);
-        
-        
     }
 
     @Override
     public String toString()
     {
         return String.format("Flight Information:\nDate: %s\nFrom: "
-                + "%s\nto: %s\nDeparture Time: %s\narrival time: %s\nPlane "
+                + "%s\nto: %s\nDeparture Time: %s\narrival time: %s\ncraft "
                 + "Information: Aircraft: %s %s Capacity: %s seats Pilot: First "
                 + "Name: %s Surname: %s Age: %d Rank: %s", dateOfFlight, 
-                origin, destination, departureTime, arrivalTime, 
+                origin, destination, departureTime.ToString(), arrivalTime.ToString(), 
                 aircraftAssigned.getMake(), aircraftAssigned.getModel(), 
                 aircraftAssigned.getCapacity(), aircraftAssigned.getPilot().getFirstName(),
                 aircraftAssigned.getPilot().getSurname(), aircraftAssigned.getPilot().getAge(),

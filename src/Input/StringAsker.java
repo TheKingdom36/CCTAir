@@ -23,6 +23,11 @@ public class StringAsker {
         this.out = out;
     }
 
+    /**
+     Returns a String which is inputed by the user
+     * 
+     * @param message This is a message which will be displayed to the user
+     */
     public String ask(String message) {
         out.println(message);
         return scanner.nextLine();

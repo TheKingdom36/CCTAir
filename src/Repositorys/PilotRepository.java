@@ -8,6 +8,8 @@ import Models.AirPlane;
 import java.util.ArrayList;
 import Models.Pilot;
 import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -32,22 +34,11 @@ public class PilotRepository extends TextFileRepository<Pilot>{
     }
     
     
-    
-    @Override
-    public void UpdateItem(String id, Pilot item) {
-   
-    }
-    
-     @Override
-    protected void CommitItemToFile(String path , Pilot pilot){
-        //TODO Figure out how to put items in file
-    }
-    
      //@Override
      protected void CreateFromFile(String path){
         
           Gson gs = new Gson();
-        BufferedReader reader = null;
+        BufferedReader reader;
         try{
             reader = new BufferedReader(new FileReader(path)); 
               
@@ -55,16 +46,12 @@ public class PilotRepository extends TextFileRepository<Pilot>{
             for(Pilot p : pilots){
                 items.add(p);
             }
-        }catch(Exception e){
+        }catch(JsonIOException | JsonSyntaxException | FileNotFoundException e){
            System.out.print(e.toString());
         }
          
     }
 
-    @Override
-    protected void UpdateItemInFile(String path, String id) {
-   
-    }
 
     
     

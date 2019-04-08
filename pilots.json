@@ -3,71 +3,68 @@
 			"firstName": "Daniel",
 			"surname": "Murphy",
 			"rank": "Chief Pilot",
-			"age": 22,
-			"pilotId": 1
+			"age": 22
+			
 		},
 		{
 			"firstName": "Stephen",
 			"surname": "Gregan",
 			"rank": "Chief Pilot",
-			"age": 27,
-			"pilotId": 2
+			"age": 27
+			
 		},
 		{
 			"firstName": "John",
 			"surname": "Smith",
 			"rank": "Chief Pilot",
-			"age": 35,
-			"pilotId": 3
+			"age": 35
+			
 		},
 		{
 			"firstName": "Joan",
 			"surname": "Rivers",
 			"rank": "Chief Pilot",
-			"age": 55,
-			"pilotId": 4
+			"age": 55
+			
 		},
 		{
 			"firstName": "Sabrina",
 			"surname": "Waters",
 			"rank": "Chief Pilot",
-			"age": 28,
-			"pilotId": 5
+			"age": 28
+			
 		},
 		{
 			"firstName": "Frank",
 			"surname": "Ocean",
 			"rank": "Chief Pilot",
-			"age": 23,
-			"pilotId": 6
+			"age": 23
+			
 		},
 		{
 			"firstName": "Robert",
 			"surname": "Redmond",
 			"rank": "Chief Pilot",
 			"age": 60,
-			"pilotId": 7
+			
 		},
 		{
 			"firstName": "Calvin",
 			"surname": "Thomas",
 			"rank": "Chief Pilot",
-			"age": 18,
-			"pilotId": 8
+			"age": 18
 		},
 		{
 			"firstName": "Paul",
 			"surname": "Reilly",
 			"rank": "Chief Pilot",
-			"age": 25,
-			"pilotId": 9
+			"age": 25
 		},
 		{
 			"firstName": "Daniel",
 			"surname": "Tools",
 			"rank": "Chief Pilot",
-			"age": 44,
-			"pilotId": 10
+			"age": 44
 		}
 		
 	]

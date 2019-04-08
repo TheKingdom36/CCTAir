@@ -65,24 +65,9 @@ public class FlightController {
         return MatchingFlights;
     }
      
-     /**
-      *Updates a flight entry within the repository
-      * 
-      * @param id The id of the flight to be updated
-      * @param flight The new flight information
-      */
-     public boolean UpdateFlight(String id,Flight flight){
-       
-        if(ValidateFlight(flight) == true){
-            flights.UpdateItem(id, flight);
-            return true;
-        }else{
-            return false;
-        }
-    }
     
     /**
-     *Returns an ArrayList of Airplanes
+     *Returns an ArrayList of Aircrafts
      */
     public ArrayList<Aircraft> GetAircrafts(){
         return this.aircrafts.GetList();

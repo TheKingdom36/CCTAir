@@ -19,6 +19,12 @@ public class DataStore {
     
     public HashMap<String,Integer> NumDaysPerMonth = new HashMap<>();
     
+    
+     public String[] Year = {"2019", "2020", "2021"};
+    
+    public String[] locations = {"Dublin", "London", "Paris"};
+ 
+    
     public DataStore(){
         NumDaysPerMonth.put("January", 31);
          NumDaysPerMonth.put("February", 30);

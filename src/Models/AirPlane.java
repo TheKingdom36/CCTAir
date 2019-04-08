@@ -28,7 +28,7 @@ public class AirPlane extends Aircraft
     @Override
     public String toString()
     {
-        return String.format("Airplane Information: Aircraft: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot());
+        return String.format("Airplane Information: Aircraft: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot().getFirstName());
         // return " Airplane Information: AirCraft: " + make + " " + model + ", Capacity: " + capacity + " seats, Pilot: " + pilot + '}';
     }
     

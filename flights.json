@@ -10,18 +10,17 @@
 			"aircraftAssigned":{
                 "type":"AirPlane",
                 "properties":{
-                    "make": "Airbus",
-			         "model": "A380",
-			         "capacity": 615,
+                    "make": "Airbus", 
+                    "model": "A380",
+                    "capacity": 615,
                         "pilot":{
-                    
 			                 "firstName": "Daniel",
 			                 "surname": "Murphy",
 			                 "rank": "Chief Pilot",
 			                 "age": 22   
-                    }
-		  }
-        }
+                        }
+                }
+            }
             
 		},
         {
@@ -44,8 +43,7 @@
 			                 "rank": "Chief Pilot",
 			                 "age": 22   
                     }
-		  }
-        }
-            
+                }
+            }
 		}
 	]

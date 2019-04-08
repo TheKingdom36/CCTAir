@@ -38,7 +38,7 @@ public class Helicopter extends Aircraft
     @Override
     public String toString()
     {
-        return String.format("Helicopter Information: Helicopter: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot());
+        return String.format("Helicopter Information: Helicopter: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot().getFirstName());
    }
 }
 

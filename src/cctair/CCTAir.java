@@ -29,7 +29,7 @@ public class CCTAir {
         //Create from file
         IRepository<Flight> flightRepository = new FlightRepository("flights.json") ;
         IRepository<Pilot> pilotRepository = new PilotRepository("pilots.json");
-        IRepository<Aircraft> aircraftRepository = new AircraftRepository("airplanes.json");
+        IRepository<Aircraft> aircraftRepository = new AircraftRepository(new String[]{"airplanes.json","helicopters.json"});
         
         
         FlightController flightController = new FlightController(flightRepository ,aircraftRepository,pilotRepository);

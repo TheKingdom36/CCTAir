@@ -1,132 +1,107 @@
 
  [{
-			"make": "Airbus",
-			"model": "A380",
-			"capacity": 615,
-            "pilot":{
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 300,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-                 },
-            "id": "A001"
+                 }
+            }
 		},
-		{
-			"make": "Boeing",
-			"model": "707",
-			"capacity": 219,
-             "pilot":{
+  {
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 400,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-            },
-            "id":"A002"
+                 }
+            }
 		},
-		{
-			"make": "Airbus",
-			"model": "A320",
-			"capacity": 186,
-             "pilot":{
+  {
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 200,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-                 },
-             "id":"A003"
+                 }
+            }
 		},
-		{
-			"make": "Boeing",
-			"model": "727",
-			"capacity": 189,
-             "pilot":{
+  {
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 615,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-                 },
-             "id":"A004"
+                 }
+            }
 		},
-		{
-			"make": "Boeing",
-			"model": "767",
-			"capacity": 375,
-             "pilot":{
+  {
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 260,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-                 },
-             "id":"A005"
+                 }
+            }
 		},
-		{
-			"make": "Boeing",
-			"model": "757",
-			"capacity": 239,
-             "pilot":{
+  {
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 305,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-                 },
-             "id":"A006"
+                 }
+            }
 		},
-		{
-			"make": "Boeing",
-			"model": "787",
-			"capacity": 335,
-             "pilot":{
+  {
+            "type": "AirPlane",
+            "properties":{
+			     "make": "Airbus",
+			     "model": "A380",
+			     "capacity": 300,
+                 "pilot":{
                     
 			             "firstName": "Daniel",
 			             "surname": "Murphy",
 			             "rank": "Chief Pilot",
 			             "age": 22   
-                 },
-             "id":"A007"
-		},
-		{
-			"make": "Boeing",
-			"model": "737",
-			"capacity": 149,
-             "pilot":{
-                    
-			             "firstName": "Daniel",
-			             "surname": "Murphy",
-			             "rank": "Chief Pilot",
-			             "age": 22   
-                 },
-             "id":"A008"
-		},
-		{
-			"make": "Boeing",
-			"model": "777",
-			"capacity": 396,
-             "pilot":{
-                    
-			             "firstName": "Daniel",
-			             "surname": "Murphy",
-			             "rank": "Chief Pilot",
-			             "age": 22   
-                 },
-             "id":"A009"
-		},
-		{
-			"make": "Boeing",
-			"model": "747",
-			"capacity": 366,
-             "pilot":{
-                    
-			             "firstName": "Daniel",
-			             "surname": "Murphy",
-			             "rank": "Chief Pilot",
-			             "age": 22   
-                 },
-             "id":"A010"
+                 }
+            }
 		}
 	]

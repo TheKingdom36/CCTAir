@@ -35,5 +35,31 @@ public abstract class View {
             System.out.println(i+1 + ". " +items[i].toString());
         }
     }
+    
+    /**
+     * Return an int inputed by the user which is within the range
+     * MinValue-MaxValue
+     *
+     * @param MinValue the minimum value of a valid int
+     * @param MaxValue the maximum value of a valid int
+     */
+    protected int GetValidInt(int MinValue, int MaxValue)
+    {
+        int EnteredValue = MinValue;
+        String message = "\nEnter a value between " + MinValue + " and " + MaxValue + " below\n\nEnter number: ";
+        do
+        {
+            if (EnteredValue > MaxValue)
+            {
+                message = "Invalid value, Entered value is too high";
+            } else if (EnteredValue < MinValue)
+            {
+                message = "Invalid value, Entered value is too low";
+            }
+            EnteredValue = IntegerAsker.ask(message);
+        } while (EnteredValue > MaxValue || EnteredValue < MinValue);
+
+        return EnteredValue;
+    }
    
 }

@@ -4,17 +4,20 @@
  * and open the template in the editor.
  */
 package Repositorys;
-import Models.AirPlane;
 import java.util.ArrayList;
 import Models.Aircraft;
-import Models.Helicopter;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
- 
+import java.lang.reflect.Type;
+import java.util.Arrays;
+
 /**
  *
  * @author Daniel Murphy
@@ -28,39 +31,54 @@ public class AircraftRepository extends TextFileRepository<Aircraft>{
     
     }
     
-    public AircraftRepository(String path){
+    public AircraftRepository(String[] fileNames){
         this.items = new ArrayList<>(); 
-        this.FilePath = path;
-        CreateFromFile("airplanes.json","helicopters.json");
+        CreateFromFiles(fileNames);
     }
     
     
-  //  @Override
-    protected void CreateFromFile(String AirPlaneFilePath ,String HelicopterFilePath){
+  
+    protected void CreateFromFiles(String[] fileNames){
         
-        Gson gs = new Gson();
-        BufferedReader reader = null;
+        Gson gs = new GsonBuilder().registerTypeAdapter(Aircraft.class, new AircraftAdapter()).create();
+        
+        BufferedReader reader;
+        
         try{
-            reader = new BufferedReader(new FileReader(AirPlaneFilePath)); 
+            for(String fileName : fileNames){
+                reader = new BufferedReader(new FileReader(fileName)); 
               
-            Aircraft[] aircrafts = gs.fromJson(reader, AirPlane[].class);
+                Aircraft[] aircrafts = gs.fromJson(reader, Aircraft[].class);
           
-            for(Aircraft a : aircrafts){
-                items.add(a);
+                items.addAll(Arrays.asList(aircrafts));
             }
-            
-            reader = new BufferedReader(new FileReader(HelicopterFilePath)); 
-              
-           aircrafts = gs.fromJson(reader, Helicopter[].class);
-          
-            for(Aircraft a : aircrafts){
-                items.add(a);
-            }
-            
         }catch(Exception e){
            System.out.print(e.toString());
         }
     }
+    
+     public class AircraftAdapter implements  JsonDeserializer<Aircraft> {
+    
+ 
+    @Override
+    public Aircraft deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context){
+        
+        
+        JsonObject jsonObject = json.getAsJsonObject();
+       
+        String type = jsonObject.get("type").getAsString();
+       
+        JsonElement element = jsonObject.get("properties");
+ 
+        try {
+          
+            return context.deserialize(element, Class.forName("Models."+type));
+        } catch (ClassNotFoundException cnfe) {
+            
+            throw new JsonParseException("Unknown element type: " + type, cnfe);
+        }
+    }
+}
 
 
     

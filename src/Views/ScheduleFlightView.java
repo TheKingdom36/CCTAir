@@ -39,26 +39,8 @@ public class ScheduleFlightView extends View {
        
        }
        
-       }
-       
-      
-                
-       
+       }       
     }
     
-     private int GetValidInt(int MinValue , int MaxValue){
-        int EnteredValue=MinValue;
-        String message = "Enter a value between " + MinValue + " and " + MaxValue;
-        do{
-            if(EnteredValue > MaxValue){
-                message = "Invalid value, Entered value is too high";
-            }else if(EnteredValue < MinValue){
-                message = "Invalid value, Entered value is too low";
-            };
-            
-                EnteredValue = IntegerAsker.ask(message);
-        }while(EnteredValue > MaxValue || EnteredValue < MinValue );
-        
-        return EnteredValue;
-    }
+     
 }

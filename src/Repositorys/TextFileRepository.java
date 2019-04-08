@@ -63,7 +63,7 @@ public abstract class TextFileRepository<T> implements IRepository<T>{
      *Takes in items from a file and adds them to the repository
      * @param path  The file path of where the repository items are to be held
      */
-    protected abstract void CreateFromFile(String path);
+    //protected abstract void CreateFromFile(String path);
     
     /**
      *Commits an item within the repository to a file

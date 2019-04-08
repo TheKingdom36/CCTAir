@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import Models.Pilot;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -44,7 +43,7 @@ public class PilotRepository extends TextFileRepository<Pilot>{
         //TODO Figure out how to put items in file
     }
     
-     @Override
+     //@Override
      protected void CreateFromFile(String path){
         
           Gson gs = new Gson();
@@ -53,7 +52,6 @@ public class PilotRepository extends TextFileRepository<Pilot>{
             reader = new BufferedReader(new FileReader(path)); 
               
             Pilot[] pilots = gs.fromJson(reader, Pilot[].class);
-            System.out.print("dk");
             for(Pilot p : pilots){
                 items.add(p);
             }

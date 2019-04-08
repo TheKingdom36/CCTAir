@@ -7,6 +7,7 @@ package Repositorys;
 import Models.AirPlane;
 import java.util.ArrayList;
 import Models.Aircraft;
+import Models.Helicopter;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -30,22 +31,32 @@ public class AircraftRepository extends TextFileRepository<Aircraft>{
     public AircraftRepository(String path){
         this.items = new ArrayList<>(); 
         this.FilePath = path;
-        CreateFromFile(this.FilePath);
+        CreateFromFile("airplanes.json","helicopters.json");
     }
     
     
-    @Override
-    protected void CreateFromFile(String path){
+  //  @Override
+    protected void CreateFromFile(String AirPlaneFilePath ,String HelicopterFilePath){
         
         Gson gs = new Gson();
         BufferedReader reader = null;
         try{
-            reader = new BufferedReader(new FileReader("airplanes.json")); 
+            reader = new BufferedReader(new FileReader(AirPlaneFilePath)); 
               
             Aircraft[] aircrafts = gs.fromJson(reader, AirPlane[].class);
+          
             for(Aircraft a : aircrafts){
                 items.add(a);
             }
+            
+            reader = new BufferedReader(new FileReader(HelicopterFilePath)); 
+              
+           aircrafts = gs.fromJson(reader, Helicopter[].class);
+          
+            for(Aircraft a : aircrafts){
+                items.add(a);
+            }
+            
         }catch(Exception e){
            System.out.print(e.toString());
         }

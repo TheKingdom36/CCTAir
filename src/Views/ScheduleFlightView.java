@@ -31,9 +31,11 @@ public class ScheduleFlightView extends View {
        
             System.out.println("Would you like to Schedule Arrival Time only OR both ArrivalTime and DepartureTime");
             if(1 == IntegerAsker.ask("Enter 1 for Arrival Time only or 2 for ArrivalTime and DepartureTime")){
-             //   FlightToBeScheduled.Schedule(StringAsker.ask("Enter new arrival time"));
+                String Time;
+                
+                FlightToBeScheduled.Schedule(StringAsker.ask("Enter new arrival time"));
             }else{
-               // FlightToBeScheduled.Schedule(StringAsker.ask("Enter new Arrival time"), StringAsker.ask("Enter new DepartureTime"));
+                FlightToBeScheduled.Schedule(StringAsker.ask("Enter new Arrival time"), StringAsker.ask("Enter new DepartureTime"));
        
        }
        
@@ -42,5 +44,21 @@ public class ScheduleFlightView extends View {
       
                 
        
+    }
+    
+     private int GetValidInt(int MinValue , int MaxValue){
+        int EnteredValue=MinValue;
+        String message = "Enter a value between " + MinValue + " and " + MaxValue;
+        do{
+            if(EnteredValue > MaxValue){
+                message = "Invalid value, Entered value is too high";
+            }else if(EnteredValue < MinValue){
+                message = "Invalid value, Entered value is too low";
+            };
+            
+                EnteredValue = IntegerAsker.ask(message);
+        }while(EnteredValue > MaxValue || EnteredValue < MinValue );
+        
+        return EnteredValue;
     }
 }

@@ -1,0 +1,61 @@
+ [{
+			"make": "Eurocopter B1 Dauphin",
+			"model": "EC155",
+			"capacity": 6,
+            
+		},
+		{
+			"make": " Agustawestland",
+			"model": "AW149",
+			"capacity": 18,
+            
+		},
+		{
+			"make": "Agustawestland",
+			"model": "BA609",
+			"capacity": 15,
+           
+		},
+		{
+			"make": "Bell Relentless",
+			"model": "525",
+			"capacity": 10,
+          
+		},
+		{
+			"make": "Eurocopter L1 Super Puma",
+			"model": "AS332",
+			"capacity": 8,
+            
+		},
+		{
+			"make": "Kazan",
+			"model": "M1-171A2",
+			"capacity": 9,
+            
+		},
+		{
+			"make": "Sikorsky Cougar",
+			"model": "S-92",
+			"capacity": 12,
+           
+		},
+		{
+			"make": "Agustawestland VVIP",
+			"model": "AW101",
+			"capacity": 20,
+            
+		},
+		{
+			"make": "Bell Huey II",
+			"model": "UH-1H",
+			"capacity": 5,
+           
+		},
+		{
+			"make": "Eurocopter Super Puma MK II+",
+			"model": "EC225",
+			"capacity": 19,
+            
+		}
+	]

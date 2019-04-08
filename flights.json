@@ -3,29 +3,49 @@
 		{
 			"origin": "Dublin",
 			"destination": "London",
-			"departureTime": {
-                "hour":7,
-                "min":67
-            },
-			"arrivalTime": {
-                "hour":4,
-                "min":5
-            },
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
 			"dateOfFlight": "10/04/2019",
-			"aircraftId": "1"
+            
+			"aircraftAssigned":{
+                "type":"AirPlane",
+                "properties":{
+                    "make": "Airbus",
+			         "model": "A380",
+			         "capacity": 615,
+                        "pilot":{
+                    
+			                 "firstName": "Daniel",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+		  }
+        }
+            
 		},
-		{
+        {
 			"origin": "Dublin",
-			"destination": "France",
-			"departureTime": {
-                "hour":7,
-                "min":67
-            },
-			"arrivalTime": {
-                "hour":4,
-                "min":5
-            },
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
 			"dateOfFlight": "10/04/2019",
-			"aircraftId": "2"
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+		  }
+        }
+            
 		}
 	]

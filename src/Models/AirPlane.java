@@ -16,20 +16,13 @@ import java.util.List;
 // Aircraft class is optional!!
 public class AirPlane extends Aircraft
 {
-    @SerializedName("airplanes")
-    @Expose
-    private List<AirPlane> airplanes = null;
 
-    public List<AirPlane> getAirplanes()
-    {
-        return airplanes;
+    public AirPlane(String make, String model, int capacity, Pilot pilot) {
+        super(make, model, capacity, pilot);
     }
-
-    public void setAirplanes(List<AirPlane> airplanes)
-    {
-        this.airplanes = airplanes;
-    }
-
+    
+   
+  
 
     // String.Format:  Is this the correct format?? Make sure!!!
     @Override

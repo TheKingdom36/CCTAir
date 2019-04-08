@@ -15,8 +15,8 @@ public class Flight
 {
     private String origin;
     private String destination;
-    private Time  departureTime;
-    private Time arrivalTime;
+    private String  departureTime;
+    private String arrivalTime;
     private String dateOfFlight;
     private Aircraft aircraftAssigned;
     
@@ -36,7 +36,7 @@ public class Flight
         this.aircraftAssigned = aircraftAssigned;
     }
 
-    public Flight(String origin, String destination, Time departureTime, Time arrivalTime, String dateOfFlight, Aircraft aircraftAssigned)
+    public Flight(String origin, String destination, String departureTime, String arrivalTime, String dateOfFlight, Aircraft aircraftAssigned)
     {
         this.origin = origin;
         this.destination = destination;
@@ -58,12 +58,12 @@ public class Flight
         return destination;
     }
 
-    public Time getDepartureTime()
+    public String getDepartureTime()
     {
         return departureTime;
     }
 
-    public Time getArrivalTime()
+    public String getArrivalTime()
     {
         return arrivalTime;
     }
@@ -88,7 +88,7 @@ public class Flight
         this.destination = destination;
     }
 
-    public void setDepartureTime(Time departureTime)
+    public void setDepartureTime(String departureTime)
     {
         this.departureTime = departureTime;
     }
@@ -105,12 +105,12 @@ public class Flight
         this.aircraftAssigned = aircraftAssigned;
     }
     
-    public void Schedule(Time arrivalTime)
+    public void Schedule(String arrivalTime)
     {
         this.arrivalTime = arrivalTime;
     }
     
-    public void Schedule(Time arrivalTime, Time departureTime)
+    public void Schedule(String arrivalTime, String departureTime)
     {
         this.arrivalTime = arrivalTime;
         this.departureTime = departureTime;
@@ -123,24 +123,28 @@ public class Flight
         public int hour;
         public int min;
         
+            
+        
         String ToString(){
             return hour + ":" +min;
         }
     }
-
-    @Override
+ @Override
     public String toString()
     {
+        
+       
         return String.format("Flight Information:\nDate: %s\nFrom: "
-                + "%s\nto: %s\nDeparture Time: %s\narrival time: %s\ncraft "
+                + "%s\nto: %s\nDeparture Time: %s\narrival time: %s\nPlane "
                 + "Information: Aircraft: %s %s Capacity: %s seats Pilot: First "
                 + "Name: %s Surname: %s Age: %d Rank: %s", dateOfFlight, 
-                origin, destination, departureTime.ToString(), arrivalTime.ToString(), 
+                origin, destination, departureTime, arrivalTime, 
                 aircraftAssigned.getMake(), aircraftAssigned.getModel(), 
                 aircraftAssigned.getCapacity(), aircraftAssigned.getPilot().getFirstName(),
                 aircraftAssigned.getPilot().getSurname(), aircraftAssigned.getPilot().getAge(),
                 aircraftAssigned.getPilot().getRank());
     }
+    
     
     
     

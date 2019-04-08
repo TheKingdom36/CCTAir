@@ -19,8 +19,6 @@ public class CreateFlightView extends View {
         this.controller = controller;
         
         this.user = user;
-        
-        
         this.name = "Create Flight";
     }
     
@@ -55,7 +53,7 @@ public class CreateFlightView extends View {
                 flight.setOrigin(StringAsker.ask("Enter ORIGIN of flight"));
 
                 flight.setDestination(StringAsker.ask("Enter DESTINATION of flight)"));
-
+               
 
                 String Date = "";
                 DataStore dataStore = new DataStore();

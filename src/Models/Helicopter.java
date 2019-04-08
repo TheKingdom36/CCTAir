@@ -18,6 +18,11 @@ public class Helicopter extends Aircraft
     @SerializedName("helicopters")
     @Expose
     private List<Helicopter> helicopters = null;
+
+    public Helicopter(String make, String model, int capacity, Pilot pilot) {
+        super(make, model, capacity, pilot);
+    }
+    
     
     public List<Helicopter> getHelicopters()
     {
@@ -28,5 +33,12 @@ public class Helicopter extends Aircraft
     {
         this.helicopters = helicopters;
     }
+    
+     // String.Format:  Is this the correct format?? Make sure!!!
+    @Override
+    public String toString()
+    {
+        return String.format("Helicopter Information: Helicopter: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot());
+   }
 }
 

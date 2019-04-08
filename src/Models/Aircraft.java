@@ -17,14 +17,14 @@ import java.util.List;
  */
 public abstract class Aircraft
 {
-    private String      make;
-    private String     model;
-    private int     capacity;
-    private Pilot      pilot;
     
-   
+    protected String      make;
+    protected String     model;
+    protected int     capacity;
+    protected Pilot      pilot;
     
-    public Aircraft(String make, String model, int capacity, Pilot pilot)
+    
+     public Aircraft(String make, String model, int capacity, Pilot pilot)
     {
         this.make = make;
         this.model = model;
@@ -32,10 +32,6 @@ public abstract class Aircraft
         this.pilot = pilot;
     }
     
-     public Aircraft()
-    {
-    
-    }
     
     public String getMake()
     {

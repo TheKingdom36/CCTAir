@@ -45,7 +45,7 @@
 			"firstName": "Robert",
 			"surname": "Redmond",
 			"rank": "Chief Pilot",
-			"age": 60,
+			"age": 60
 			
 		},
 		{
@@ -58,13 +58,44 @@
 			"firstName": "Paul",
 			"surname": "Reilly",
 			"rank": "Chief Pilot",
-			"age": 25
+			"age": 26
 		},
 		{
 			"firstName": "Daniel",
 			"surname": "Tools",
 			"rank": "Chief Pilot",
+			"age": 34
+		},
+        {
+         "firstName": "Jill",
+			"surname": "O",
+			"rank": "Co-Pilot",
+			"age": 36
+        },
+        {
+         "firstName": "Mark",
+			"surname": "Brennan",
+			"rank": "Co-Pilot",
+			"age": 22
+        },
+        {
+         "firstName": "Steve",
+			"surname": "Rodgers",
+			"rank": "Co-Pilot",
+			"age": 21
+        },
+        {
+         "firstName": "Tony",
+			"surname": "Stark",
+			"rank": "Co-Pilot",
+			"age": 30
+        },
+        {
+         "firstName": "Bruce",
+			"surname": "Banner",
+			"rank": "Co-Pilot",
 			"age": 44
-		}
+        }
+        
 		
 	]

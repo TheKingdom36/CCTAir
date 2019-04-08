@@ -5,7 +5,7 @@
 			"destination": "London",
 			"departureTime": "09:00",
 			"arrivalTime": "10:27",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "March/7/2019",
             
 			"aircraftAssigned":{
                 "type":"AirPlane",
@@ -14,14 +14,681 @@
                     "model": "A380",
                     "capacity": 615,
                         "pilot":{
-			                 "firstName": "Daniel",
-			                 "surname": "Murphy",
+			                 "firstName": "Frank",
+			                 "surname": "Ocean",
 			                 "rank": "Chief Pilot",
-			                 "age": 22   
+			                 "age": 23   
                         }
                 }
             }
             
+		},
+        {
+			"origin": "Paris",
+			"destination": "London",
+			"departureTime": "12:00",
+			"arrivalTime": "2:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "3:27",
+			"dateOfFlight": "July/4/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Robert",
+			                 "surname": "Redmond",
+			                 "rank": "Chief Pilot",
+			                 "age": 60   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Lisbon",
+			"destination": "Dublin",
+			"departureTime": "4:00",
+			"arrivalTime": "6:27",
+			"dateOfFlight": "July/11/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Calvin",
+			                 "surname": "Thomas",
+			                 "rank": "Chief Pilot",
+			                 "age": 18   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "Lisbon",
+			"departureTime": "14:00",
+			"arrivalTime": "16:20",
+			"dateOfFlight": "October/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Paul",
+			                 "surname": "Reilly",
+			                 "rank": "Chief Pilot",
+			                 "age": 25  
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Vienna",
+			"destination": "London",
+			"departureTime": "15:00",
+			"arrivalTime": "18:07",
+			"dateOfFlight": "June/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Daniel",
+			                 "surname": "Tools",
+			                 "rank": "Chief Pilot",
+			                 "age": 44 
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Lisbon",
+			"destination": "Vienna",
+			"departureTime": "11:00",
+			"arrivalTime": "13:00",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "London",
+			"departureTime": "20:00",
+			"arrivalTime": "22:25",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Bruce",
+			                 "surname": "Banner",
+			                 "rank": "Co-Pilot",
+			                 "age": 44   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Berlin",
+			"destination": "Dublin",
+			"departureTime": "16:00",
+			"arrivalTime": "18:30",
+			"dateOfFlight": "December/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Tony",
+			                 "surname": "Stark",
+			                 "rank": "Co-Pilot",
+			                 "age": 30
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Prague",
+			"destination": "Lisbon",
+			"departureTime": "17:00",
+			"arrivalTime": "20:27",
+			"dateOfFlight": "May/9/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                  "firstName": "Steve",
+			                     "surname": "Rodgers",
+			                     "rank": "Co-Pilot",
+			                     "age": 21
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Lisbon",
+			"destination": "Prague",
+			"departureTime": "14:00",
+			"arrivalTime": "18:27",
+			"dateOfFlight": "November/29/2020",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Mark",
+			                 "surname": "Brennan",
+			                 "rank": "Co-Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Berlin",
+			"destination": "London",
+			"departureTime": "23:00",
+			"arrivalTime": "1:28",
+			"dateOfFlight": "August/8/2020",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Jill",
+			                 "surname": "O",
+			                 "rank": "Co-Pilot",
+			                 "age": 36
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Berlin",
+			"destination": "Prague",
+			"departureTime": "14:00",
+			"arrivalTime": "16:19",
+			"dateOfFlight": "March/18/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Daniel",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Berlin",
+			"destination": "Vienna",
+			"departureTime": "17:00",
+			"arrivalTime": "19:35",
+			"dateOfFlight": "Janurary/15/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Berlin",
+			"destination": "Rome",
+			"departureTime": "03:00",
+			"arrivalTime": "05:27",
+			"dateOfFlight": "May/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Stephen",
+			                 "surname": "Gregan",
+			                 "rank": "Chief Pilot",
+			                 "age": 27 
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "11:23",
+			"dateOfFlight": "April/04/2020",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "John",
+			                 "surname": "Smith",
+			                 "rank": "Chief",
+                            "age": 35
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "Lisbon",
+			"departureTime": "11:00",
+			"arrivalTime": "1:52",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Sabrina",
+			                 "surname": "Waters",
+			                 "rank": "Chief Pilot",
+			                 "age": 28  
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "Prague",
+			"departureTime": "1:00",
+			"arrivalTime": "3:27",
+			"dateOfFlight": "June/9/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Frank",
+			                 "surname": "Ocean",
+			                 "rank": "Chief Pilot",
+			                 "age": 23
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Rome",
+			"destination": "Dublin",
+			"departureTime": "14:00",
+			"arrivalTime": "15:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Robert",
+			                 "surname": "Redmond",
+			                 "rank": "Chief Pilot",
+			                 "age": 60   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Calvin",
+			                 "surname": "Thomas",
+			                 "rank": "Chief Pilot",
+			                 "age": 18  
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                "firstName": "Paul",
+			                 "surname": "Reilly",
+			                 "rank": "Chief Pilot",
+			                 "age": 26
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Daniel",
+			                 "surname": "Tools",
+			                 "rank": "Chief Pilot",
+			                 "age": 34  
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "Jill",
+			                 "surname": "O",
+			                 "rank": "Co-Pilot",
+			                 "age": 36
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
+		},
+        {
+			"origin": "Dublin",
+			"destination": "London",
+			"departureTime": "09:00",
+			"arrivalTime": "10:27",
+			"dateOfFlight": "10/04/2019",
+            
+			"aircraftAssigned":{
+                "type":"Helicopter",
+                "properties":{
+                    "make": "Agustawestland",
+			         "model": "BA609",
+			         "capacity": 15,
+                        "pilot":{
+                    
+			                 "firstName": "jack",
+			                 "surname": "Murphy",
+			                 "rank": "Chief Pilot",
+			                 "age": 22   
+                    }
+                }
+            }
 		},
         {
 			"origin": "Dublin",
@@ -46,4 +713,5 @@
                 }
             }
 		}
+	
 	]

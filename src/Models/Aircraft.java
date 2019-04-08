@@ -76,7 +76,7 @@ public abstract class Aircraft
     @Override
     public String toString()
     {
-        return "Aircraft{" + "make=" + make + ", model=" + model + ", capacity=" + capacity + ", pilot=" + pilot + '}';
+        return "Aircraft{" + "make=" + make + ", model=" + model + ", capacity=" + capacity + ", pilot=" + pilot.getFirstName()+" "+pilot.getSurname() + '}';
     }
     
     

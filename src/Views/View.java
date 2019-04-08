@@ -26,13 +26,13 @@ public abstract class View {
     
     public <T> void PrintList(ArrayList<T> items){
         for(int i=0; i<items.size();i++){
-            System.out.println(i+1 + ". " +items.get(i).toString());
+            System.out.println(i+1 + ". " +items.get(i).toString() + "\n");
         }
     }
     
     public <T> void PrintList(T[] items){
         for(int i=0; i<items.length;i++){
-            System.out.println(i+1 + ". " +items[i].toString());
+            System.out.println(i+1 + ". " +items[i].toString() + "\n");
         }
     }
     
@@ -51,10 +51,10 @@ public abstract class View {
         {
             if (EnteredValue > MaxValue)
             {
-                message = "Invalid value, Entered value is too high";
+                message = "Invalid value, Entered value is too high, please try again: ";
             } else if (EnteredValue < MinValue)
             {
-                message = "Invalid value, Entered value is too low";
+                message = "Invalid value, Entered value is too low, please try again: ";
             }
             EnteredValue = IntegerAsker.ask(message);
         } while (EnteredValue > MaxValue || EnteredValue < MinValue);

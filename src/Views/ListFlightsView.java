@@ -23,7 +23,7 @@ public class ListFlightsView extends View {
           System.out.println("//////////////////////////////////////////////////////////////////////////");
         System.out.println(controller.GetFlights().size());
           for(int i=0; i<controller.GetFlights().size();i++){
-              System.out.print(controller.GetFlights().get(i).toString());
+              System.out.println(i + ". " + controller.GetFlights().get(i).toString());
           }
           
           System.out.println("//////////////////////////////////////////////////////////////////////////");

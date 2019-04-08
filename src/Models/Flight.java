@@ -118,17 +118,7 @@ public class Flight
     
     
     
-    
-    public class Time {
-        public int hour;
-        public int min;
-        
-            
-        
-        String ToString(){
-            return hour + ":" +min;
-        }
-    }
+
  @Override
     public String toString()
     {

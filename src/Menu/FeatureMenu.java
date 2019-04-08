@@ -47,7 +47,8 @@ public class FeatureMenu {
             System.out.print(i+1 + ". ");
             System.out.println(this.menuItems.get(i).GetName());
         }
-        
+        System.out.println("\nPlease choose a number from above to progress.\n");
+        System.out.print("Enter number: ");
         HandleInput(integerAsker.ask(""));
         
     }

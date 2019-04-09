@@ -22,14 +22,27 @@ public abstract class View {
     protected IntegerAsker IntegerAsker = new IntegerAsker(System.in,System.out);
     protected FlightController controller;
     
+    /**
+     *Generates the display for the view
+     */
     public abstract void RenderView();
     
+     /**
+     *Takes an arrayList of items and displays each items toString to the user
+     * 
+     * @param items The items to be displayed to the user
+     */
     public <T> void PrintList(ArrayList<T> items){
         for(int i=0; i<items.size();i++){
             System.out.println(i+1 + ". " +items.get(i).toString() + "\n");
         }
     }
     
+    /**
+     *Takes an array of items and displays each items toString to the user
+     * 
+     * @param items The items to be displayed to the user
+     */
     public <T> void PrintList(T[] items){
         for(int i=0; i<items.length;i++){
             System.out.println(i+1 + ". " +items[i].toString() + "\n");

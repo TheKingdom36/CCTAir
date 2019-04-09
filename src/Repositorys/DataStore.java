@@ -22,7 +22,7 @@ public class DataStore {
     
      public String[] Year = {"2019", "2020", "2021"};
     
-    public String[] locations = {"Dublin", "London", "Paris"};
+    public String[] locations = {"Dublin", "London", "Paris","Rome","Berlin","Prague","Lisbon","Vienna"};
  
     
     public DataStore(){

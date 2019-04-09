@@ -124,10 +124,10 @@ public class Flight
     {
         
        
-        return String.format("Flight Information:\nDate: %s\nFrom: "
+        return String.format("\nFlight Information:\nDate: %s\nFrom: "
                 + "%s\nto: %s\nDeparture Time: %s\narrival time: %s\nPlane "
                 + "Information: Aircraft: %s %s Capacity: %s seats Pilot: First "
-                + "Name: %s Surname: %s Age: %d Rank: %s", dateOfFlight, 
+                + "Name: %s Surname: %s Age: %d Rank: %s\n", dateOfFlight, 
                 origin, destination, departureTime, arrivalTime, 
                 aircraftAssigned.getMake(), aircraftAssigned.getModel(), 
                 aircraftAssigned.getCapacity(), aircraftAssigned.getPilot().getFirstName(),

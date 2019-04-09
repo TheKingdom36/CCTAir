@@ -15,26 +15,15 @@ import java.util.List;
  */
 public class Helicopter extends Aircraft
 {
-    @SerializedName("helicopters")
-    @Expose
-    private List<Helicopter> helicopters = null;
+   
 
     public Helicopter(String make, String model, int capacity, Pilot pilot) {
         super(make, model, capacity, pilot);
     }
     
     
-    public List<Helicopter> getHelicopters()
-    {
-        return helicopters;
-    }
     
-    public void setHelicopters(List<Helicopter> helicopters)
-    {
-        this.helicopters = helicopters;
-    }
     
-     // String.Format:  Is this the correct format?? Make sure!!!
     @Override
     public String toString()
     {

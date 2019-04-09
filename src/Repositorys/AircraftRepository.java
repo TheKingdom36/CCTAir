@@ -24,7 +24,7 @@ import java.util.Arrays;
  */
 public class AircraftRepository extends TextFileRepository<Aircraft>{
     
-    public ArrayList<Aircraft> aircrafts;
+   
     public void AircraftRepository()
     {
      this.items = new ArrayList<>(); 
@@ -37,7 +37,11 @@ public class AircraftRepository extends TextFileRepository<Aircraft>{
     }
     
     
-  
+  /**
+   *Takes in multiple files and adds there contents to the repository
+   * 
+   * @param fileNames The files whos contents are to added to repository
+   */
     protected void CreateFromFiles(String[] fileNames){
         
         Gson gs = new GsonBuilder().registerTypeAdapter(Aircraft.class, new AircraftAdapter()).create();
@@ -57,9 +61,15 @@ public class AircraftRepository extends TextFileRepository<Aircraft>{
         }
     }
     
+    
+    
      public class AircraftAdapter implements  JsonDeserializer<Aircraft> {
     
  
+     /**
+      *Deserlize a jsonElement into an object of subclass Aircraft
+      * 
+      */
     @Override
     public Aircraft deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context){
         

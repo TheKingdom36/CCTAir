@@ -29,7 +29,7 @@ public class StringAsker {
      * @param message This is a message which will be displayed to the user
      */
     public String ask(String message) {
-        out.println(message);
+        out.print(message);
         return scanner.nextLine();
     }
 }

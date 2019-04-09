@@ -20,10 +20,10 @@ public class ListFlightsView extends View {
     
     @Override
     public void RenderView() {
-          System.out.println("//////////////////////////////////////////////////////////////////////////");
-        System.out.println(controller.GetFlights().size());
+          System.out.println("\n/////////////////////////////////////////////////////////////////////////\n");
+        System.out.println("Total number of flights: " + controller.GetFlights().size() + "\n");
           for(int i=0; i<controller.GetFlights().size();i++){
-              System.out.println(i + ". " + controller.GetFlights().get(i).toString());
+              System.out.println(i+1 + ". " + controller.GetFlights().get(i).toString());
           }
           
           System.out.println("//////////////////////////////////////////////////////////////////////////");

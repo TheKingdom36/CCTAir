@@ -33,14 +33,17 @@ public class PilotRepository extends TextFileRepository<Pilot>{
         CreateFromFile(FilePath);
     }
     
-    
-     //@Override
-     protected void CreateFromFile(String path){
+     /**
+    *Takes in a file name and generates content for the repository from it 
+    * 
+    * @param fileName the file who content will be added to the Repository
+    */
+     protected void CreateFromFile(String fileName){
         
           Gson gs = new Gson();
         BufferedReader reader;
         try{
-            reader = new BufferedReader(new FileReader(path)); 
+            reader = new BufferedReader(new FileReader(fileName)); 
               
             Pilot[] pilots = gs.fromJson(reader, Pilot[].class);
             for(Pilot p : pilots){

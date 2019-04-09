@@ -36,16 +36,13 @@ public class FlightController {
     } 
     
     /**
-     *Adds a flight to the flights repository if the flight is accepted
+     *Adds a flight to the flights repository
      */
-    public boolean AddFlight(Flight flight){
+    public void AddFlight(Flight flight){
         
-        if(ValidateFlight(flight) == true){
+        
             flights.AddItem(flight);
-            return true;
-        }else{
-            return false;
-        }  
+           
     }
     
     /**
@@ -55,11 +52,11 @@ public class FlightController {
      */
      public ArrayList<Flight> FindFlights(String Origin){
         ArrayList<Flight> MatchingFlights = new ArrayList<Flight>();
-        ArrayList<Flight> AvailableFlights = flights.GetList();
         
-        for(int i=0; i<AvailableFlights.size();i++){
-            if(Origin.equals(AvailableFlights.get(i).getOrigin())){
-                MatchingFlights.add(AvailableFlights.get(i));
+        
+        for(int i=0; i<flights.GetList().size();i++){
+            if(Origin.equals(flights.GetList().get(i).getOrigin())){
+                MatchingFlights.add(flights.GetList().get(i));
             }
         }
         return MatchingFlights;
@@ -76,16 +73,9 @@ public class FlightController {
     /**
      *Returns an ArrayList of Pilots
      */
-    public ArrayList<Pilot> GetPliots(){
+    public ArrayList<Pilot> GetPilots(){
         return this.pilots.GetList();
     }
     
-    /**
-     *Validates that a Flight meets the required information
-     * 
-     * @param flight flight to be validated
-     */
-     private boolean ValidateFlight(Flight flight){
-        return true;
-    }
+    
 }

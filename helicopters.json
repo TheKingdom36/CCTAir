@@ -6,10 +6,10 @@
 			"capacity": 6,
             "pilot":{
                     
-			             "firstName": "Daniel",
-			             "surname": "Murphy",
-			             "rank": "Chief Pilot",
-			             "age": 22   
+			            "firstName": "Unassigned",
+			             "surname": "Unassigned",
+			             "rank": "Unassigned",
+			             "age": 0    
                  
             }
      }
@@ -29,13 +29,10 @@
                 "pilot":{
                     
 			        
-                    "firstName": "Daniel",
-			        
-                    "surname": "Murphy",
-			    
-                    "rank": "Chief Pilot",
-			        
-                    "age": 22        
+                    "firstName": "Unassigned",
+			             "surname": "Unassigned",
+			             "rank": "Unassigned",
+			             "age": 0     
             
                 }
      
@@ -80,14 +77,10 @@
          
                 "pilot":{
                     
-			             
-                    "firstName": "Daniel",
-			            
-                    "surname": "Murphy",
-			            
-                    "rank": "Chief Pilot",
-			           
-                    "age": 22   
+			         "firstName": "Unassigned",
+			             "surname": "Unassigned",
+			             "rank": "Unassigned",
+			             "age": 0   
                  
                 }
             }
@@ -106,14 +99,10 @@
                 "pilot":{
                     
 			           
-                    "firstName": "Daniel",
-			           
-                    "surname": "Murphy",
-			         
-                    "rank": "Chief Pilot",
-			         
-                    "age": 22   
-                 
+                  "firstName": "Unassigned",
+			             "surname": "Unassigned",
+			             "rank": "Unassigned",
+			             "age": 0   
             
                 }
      
@@ -135,14 +124,10 @@
                 "pilot":{
                     
 			             
-                    "firstName": "Daniel",
-			            
-                    "surname": "Murphy",
-			           
-                    "rank": "Chief Pilot",
-			          
-                    "age": 22   
-                 
+                    "firstName": "Unassigned",
+			             "surname": "Unassigned",
+			             "rank": "Unassigned",
+			             "age": 0   
            
                 }
      
@@ -160,14 +145,10 @@
             
                 "pilot":{
                     
-			             
-                    "firstName": "Daniel",
-			            
-                    "surname": "Murphy",
-			            
-                    "rank": "Chief Pilot",
-			           
-                    "age": 22   
+			        "firstName": "Unassigned",
+			             "surname": "Unassigned",
+			             "rank": "Unassigned",
+			             "age": 0   
                 }
      
             }

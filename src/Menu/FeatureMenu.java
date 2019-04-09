@@ -39,7 +39,7 @@ public class FeatureMenu {
     }
     
     /**
-     *Generates the view for the featureMenu
+     *Generates the display for the featureMenu
      */
     public void RenderView(){
         for(int i=0; i< this.menuItems.size();i++){

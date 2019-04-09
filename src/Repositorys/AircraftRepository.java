@@ -11,9 +11,12 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonIOException;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+import com.google.gson.JsonSyntaxException;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.util.Arrays;
@@ -42,6 +45,7 @@ public class AircraftRepository extends TextFileRepository<Aircraft>{
    * 
    * @param fileNames The files whos contents are to added to repository
    */
+    @Override
     protected void CreateFromFiles(String[] fileNames){
         
         Gson gs = new GsonBuilder().registerTypeAdapter(Aircraft.class, new AircraftAdapter()).create();
@@ -56,7 +60,7 @@ public class AircraftRepository extends TextFileRepository<Aircraft>{
           
                 items.addAll(Arrays.asList(aircrafts));
             }
-        }catch(Exception e){
+        }catch(JsonIOException | JsonSyntaxException | FileNotFoundException e){
            System.out.print(e.toString());
         }
     }

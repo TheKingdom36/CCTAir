@@ -81,6 +81,9 @@ public class Pilot
         this.isAvailable = isAvailable;
     }
 
+    /**
+    *Returns details of the aircraft as a string
+    */
     @Override
     public String toString()
     {

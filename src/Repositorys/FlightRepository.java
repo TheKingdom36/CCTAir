@@ -33,33 +33,34 @@ public class FlightRepository extends TextFileRepository<Flight>{
      this.items = new ArrayList<>(); 
     }
     
-    public FlightRepository(String path){
+    public FlightRepository(String[] fileNames){
         this.items = new ArrayList<>(); 
-        this.FilePath = path;
-        CreateFromFile(FilePath);
+       
+        CreateFromFiles(fileNames);
     }
    
-   
-    
-   
-    
+
     
    /**
-    *Takes in a file name and generates content for the repository from it 
-    * 
-    * @param fileName the file who content will be added to the Repository
-    */
-     protected void CreateFromFile(String fileName){
+   *Takes in multiple files and adds there contents to the repository
+   * 
+   * @param fileNames The files whos contents are to added to repository
+   */
+    @Override
+     protected void CreateFromFiles(String[] fileNames){
         
         BufferedReader reader ;
          Gson gs = new GsonBuilder().registerTypeAdapter(Aircraft.class, new AircraftAdapter()).create();
        
         try{
             
-            reader = new BufferedReader(new FileReader(fileName)); 
-            Flight[] flights = gs.fromJson(reader, Flight[].class);
-            
-            items.addAll(Arrays.asList(flights));
+           for(String fileName : fileNames){
+                reader = new BufferedReader(new FileReader(fileName)); 
+              
+                Flight[] flights = gs.fromJson(reader, Flight[].class);
+          
+                items.addAll(Arrays.asList(flights));
+            }
             
         }catch(JsonIOException | JsonSyntaxException | FileNotFoundException e){
            System.out.print(e.toString());

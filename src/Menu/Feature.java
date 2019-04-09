@@ -13,20 +13,24 @@ import Views.View;
  */
 public class Feature {
   
+      // Declare a variable called "ItemName".
     protected String ItemName;
+    // Declare a View called "view".
     protected View view;
-   
-       
-    public Feature(View view , String ItemName){
-       this.ItemName = ItemName;
-       this.view = view;
-   }
-       
+
+    // Feature Constructor
+    public Feature(View view, String ItemName)
+    {
+        this.ItemName = ItemName;
+        this.view = view;
+    }
+
     /**
-     *Generates the view associated with the feature
+     * Generates the view associated with the feature
      */
-    public void RenderView(){
-         view.RenderView();
+    public void RenderView()
+    {
+        view.RenderView();
     };
     
     /**
@@ -34,8 +38,8 @@ public class Feature {
      * 
      * @return A string which is the name of the feature 
      */
-    public String GetName(){
-        
+    public String GetName()
+    {
         return ItemName;
     }
 }

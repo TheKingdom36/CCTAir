@@ -5,15 +5,12 @@
  */
 package Models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
 
 /**
  *
  * @author Stephen
  */
-// Aircraft class is optional!!
+
 public class AirPlane extends Aircraft
 {
 
@@ -21,10 +18,9 @@ public class AirPlane extends Aircraft
         super(make, model, capacity, pilot);
     }
     
-   
-  
-
-    // String.Format:  Is this the correct format?? Make sure!!!
+   /**
+    *Returns details of the aircraft as a string
+    */
     @Override
     public String toString()
     {

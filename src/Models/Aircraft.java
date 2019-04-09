@@ -5,12 +5,6 @@
  */
 package Models;
 
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author Stephen
@@ -68,11 +62,14 @@ public abstract class Aircraft
         this.capacity = capacity;
     }
     
-    public void setPilot(Pilot pilot)
+    public void AssignPilot(Pilot pilot)
     {
         this.pilot = pilot;
     }
 
+    /**
+    *Returns details of the aircraft as a string
+    */
     @Override
     public String toString()
     {

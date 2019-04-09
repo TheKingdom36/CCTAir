@@ -14,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
  
 /**
  *
@@ -27,28 +28,30 @@ public class PilotRepository extends TextFileRepository<Pilot>{
      
     }
     
-    public PilotRepository(String path){
+    public PilotRepository(String[] fileNames){
         this.items = new ArrayList<>(); 
-        this.FilePath = path;
-        CreateFromFile(FilePath);
+        CreateFromFiles(fileNames);
     }
     
      /**
-    *Takes in a file name and generates content for the repository from it 
-    * 
-    * @param fileName the file who content will be added to the Repository
-    */
-     protected void CreateFromFile(String fileName){
+   *Takes in multiple files and adds there contents to the repository
+   * 
+   * @param fileNames The files whos contents are to added to repository
+   */
+    @Override
+     protected void CreateFromFiles(String[] fileNames){
         
           Gson gs = new Gson();
         BufferedReader reader;
         try{
-            reader = new BufferedReader(new FileReader(fileName)); 
+            for(String fileName : fileNames){
+                reader = new BufferedReader(new FileReader(fileName)); 
               
-            Pilot[] pilots = gs.fromJson(reader, Pilot[].class);
-            for(Pilot p : pilots){
-                items.add(p);
+                Pilot[] pilots = gs.fromJson(reader, Pilot[].class);
+          
+                items.addAll(Arrays.asList(pilots));
             }
+            
         }catch(JsonIOException | JsonSyntaxException | FileNotFoundException e){
            System.out.print(e.toString());
         }

@@ -10,34 +10,34 @@ import Input.StringAsker;
 import Controllers.FlightController;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author Daniel Murphy
  */
-public abstract class View {
-
+public abstract class View
+{
+    // Declare a variable of type "String" called "name"
     protected String name;
-    protected StringAsker StringAsker = new StringAsker(System.in,System.out);
-    protected IntegerAsker IntegerAsker = new IntegerAsker(System.in,System.out);
+    // Create an instance of "StringAsker"
+    protected StringAsker StringAsker = new StringAsker(System.in, System.out);
+    // Create an instance of "IntegerAsker"
+    protected IntegerAsker IntegerAsker = new IntegerAsker(System.in, System.out);
+    // Set up a "FlightController"
     protected FlightController controller;
-    
-    /**
-     *Generates the display for the view
-     */
+
     public abstract void RenderView();
     
-     /**
-     *Takes an arrayList of items and displays each items toString to the user
-     * 
-     * @param items The items to be displayed to the user
-     */
-    public <T> void PrintList(ArrayList<T> items){
-        for(int i=0; i<items.size();i++){
-            System.out.println(i+1 + ". " +items.get(i).toString() + "\n");
+    // The "PrintList" method for ArrayList's
+    public <T> void PrintList(ArrayList<T> items)
+    {
+        // Loop through an ArrayList.
+        for (int i = 0; i < items.size(); i++)
+        {
+            // Print out the content adding a number starting from 1,2,3,4 etc
+            // and a dot to the start.
+            System.out.println(i + 1 + ". " + items.get(i).toString() + "\n");
         }
     }
-    
     /**
      *Takes an array of items and displays each items toString to the user
      * 

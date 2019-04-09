@@ -27,8 +27,8 @@ public class CCTAir {
         FeatureMenu menu = new FeatureMenu();
         
         //Create from file
-        IRepository<Flight> flightRepository = new FlightRepository("flights.json") ;
-        IRepository<Pilot> pilotRepository = new PilotRepository("pilots.json");
+        IRepository<Flight> flightRepository = new FlightRepository(new String[]{"flights.json"}) ;
+        IRepository<Pilot> pilotRepository = new PilotRepository(new String[]{"pilots.json"});
         IRepository<Aircraft> aircraftRepository = new AircraftRepository(new String[]{"airplanes.json","helicopters.json"});
         
         
@@ -38,9 +38,10 @@ public class CCTAir {
         menu.AddItem(new Feature(new ScheduleFlightView(flightController),"Schedule Flight"));
         menu.AddItem(new Feature(new ListFlightsView(flightController),"List Flights"));
         
-            
+       
         do{   
             System.out.println("//////////////////////////////////////////////////////////////////////////\n");
+            System.out.println("Welcome to CCTAir!\n");
             menu.RenderView();
         }while(true);
          

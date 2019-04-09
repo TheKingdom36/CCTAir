@@ -14,7 +14,6 @@ import java.util.ArrayList;
  */
 public abstract class TextFileRepository<T> implements IRepository<T>{
     ArrayList<T> items;
-    protected String FilePath;
     public TextFileRepository(){
         items = new ArrayList<>();
         
@@ -48,13 +47,13 @@ public abstract class TextFileRepository<T> implements IRepository<T>{
         return items;
     }
 
-    protected  void CreateFromFile(String fileName){
-        //do nothing
-    };
-    
-    protected void CreateFromFiles(String[] fileNames){
-        //do nothing
-    };
+   /**
+   *Takes in multiple files and adds there contents to the repository
+   * 
+   * @param fileNames The files whos contents are to added to repository
+   */
+   
+    protected abstract void CreateFromFiles(String[] fileNames);
     
     
     

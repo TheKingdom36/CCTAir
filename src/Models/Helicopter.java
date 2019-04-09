@@ -5,12 +5,7 @@
  */
 package Models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-
 /**
- *
  * @author Stephen
  */
 public class Helicopter extends Aircraft
@@ -23,7 +18,9 @@ public class Helicopter extends Aircraft
     
     
     
-    
+    /**
+    *Returns details of the aircraft as a string
+    */
     @Override
     public String toString()
     {

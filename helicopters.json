@@ -21,9 +21,7 @@
             "properties":{
 			
                 "make": " Agustawestland",
-			
                 "model": "AW149",
-			
                 "capacity": 18,
             
                 "pilot":{
@@ -44,9 +42,7 @@
             "properties":{
 			
                 "make": "Agustawestland",
-			
                 "model": "BA609",
-			
                 "capacity": 15,
            
                 "pilot":{
@@ -70,18 +66,13 @@
             "properties":{
 			
                 "make": "Bell Relentless",
-			
                 "model": "525",
-			
                 "capacity": 10,
-         
                 "pilot":{
-                    
 			         "firstName": "Unassigned",
 			             "surname": "Unassigned",
 			             "rank": "Unassigned",
 			             "age": 0   
-                 
                 }
             }
 		},
@@ -91,11 +82,8 @@
             "properties":{
 			
                 "make": "Agustawestland VVIP",
-			
                 "model": "AW101",
-			
                 "capacity": 20,
-            
                 "pilot":{
                     
 			           
@@ -116,9 +104,7 @@
             "properties":{
 			
                 "make": "Bell Huey II",
-			
                 "model": "UH-1H",
-			
                 "capacity": 5,
            
                 "pilot":{
@@ -138,9 +124,7 @@
             "properties":{
 			
                 "make": "Eurocopter Super Puma MK II+",
-			
                 "model": "EC225",
-			
                 "capacity": 19,
             
                 "pilot":{

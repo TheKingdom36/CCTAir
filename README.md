@@ -1,2 +1,0 @@
-# CCTAir
-Airline flight scheduler

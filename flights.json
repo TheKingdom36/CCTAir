@@ -27,14 +27,14 @@
 			"destination": "London",
 			"departureTime": "12:00",
 			"arrivalTime": "2:27",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "May/04/2020",
             
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                     "make": "Eurocopter B1 Dauphin",
+			         "model": "EC155",
+			         "capacity": 6,
                         "pilot":{
                     
 			                 "firstName": "jack",
@@ -55,9 +55,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Bell Relentless",
+                    "model": "525",
+                    "capacity": 10,
                         "pilot":{
                     
 			                "firstName": "Robert",
@@ -78,9 +78,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Agustawestland VVIP",
+                    "model": "AW101",
+                    "capacity": 20,
                         "pilot":{
                     
 			                "firstName": "Calvin",
@@ -101,9 +101,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Bell Huey II",
+                    "model": "UH-1H",
+                    "capacity": 5,
                         "pilot":{
                     
 			                 "firstName": "Paul",
@@ -124,9 +124,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Eurocopter Super Puma MK II+",
+                    "model": "EC225",
+                    "capacity": 19,
                         "pilot":{
                     
 			                 "firstName": "Daniel",
@@ -142,14 +142,14 @@
 			"destination": "Vienna",
 			"departureTime": "11:00",
 			"arrivalTime": "13:00",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "December/04/2019",
             
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Eurocopter B1 Dauphin",
+			         "model": "EC155",
+			         "capacity": 6,
                         "pilot":{
                     
 			                 "firstName": "jack",
@@ -165,14 +165,14 @@
 			"destination": "London",
 			"departureTime": "20:00",
 			"arrivalTime": "22:25",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "June/04/2019",
             
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                        "make": " Agustawestland",
+                        "model": "AW149",
+                        "capacity": 18,
                         "pilot":{
                     
 			                 "firstName": "Bruce",
@@ -193,9 +193,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                     "make": "Agustawestland",
+                     "model": "BA609",
+                     "capacity": 15,
                         "pilot":{
                     
 			                 "firstName": "Tony",
@@ -216,9 +216,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Bell Relentless",
+                    "model": "525",
+                    "capacity": 10,
                         "pilot":{
                     
 			                  "firstName": "Steve",
@@ -239,9 +239,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Agustawestland VVIP",
+                    "model": "AW101",
+                    "capacity": 20,
                         "pilot":{
                     
 			                "firstName": "Mark",
@@ -262,9 +262,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Bell Huey II",
+                    "model": "UH-1H",
+                    "capacity": 5,
                         "pilot":{
                     
 			                "firstName": "Jill",
@@ -285,9 +285,9 @@
 			"aircraftAssigned":{
                 "type":"Helicopter",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Eurocopter Super Puma MK II+",
+                    "model": "EC225",
+                    "capacity": 19,
                         "pilot":{
                     
 			                "firstName": "Daniel",
@@ -352,11 +352,11 @@
 			"dateOfFlight": "April/04/2020",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                     "make": "Airbus",
+			         "model": "A380",
+			         "capacity": 300,
                         "pilot":{
                     
 			                "firstName": "John",
@@ -372,14 +372,14 @@
 			"destination": "Lisbon",
 			"departureTime": "11:00",
 			"arrivalTime": "1:52",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "July/04/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                     "make": "Boeing",
+			         "model": "727",
+			         "capacity": 189,
                         "pilot":{
                     
 			                 "firstName": "Sabrina",
@@ -398,11 +398,11 @@
 			"dateOfFlight": "June/9/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Boeing",
+			         "model": "767",
+			         "capacity": 375,
                         "pilot":{
                     
 			                 "firstName": "Frank",
@@ -421,11 +421,11 @@
 			"dateOfFlight": "Feburary/04/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                      "make": "Boeing",
+			          "model": "757",
+			          "capacity": 239,
                         "pilot":{
                     
 			                 "firstName": "Robert",
@@ -444,11 +444,11 @@
 			"dateOfFlight": "March/04/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Airbus",
+			         "model": "A380",
+			         "capacity": 260,
                         "pilot":{
                     
 			                 "firstName": "Calvin",
@@ -467,11 +467,11 @@
 			"dateOfFlight": "May/24/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Boeing",
+			         "model": "737",
+			         "capacity": 149,
                         "pilot":{
                     
 			                "firstName": "Paul",
@@ -490,11 +490,11 @@
 			"dateOfFlight": "June/14/2021",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                     "make": "Boeing",
+			         "model": "787",
+			         "capacity": 335,
                         "pilot":{
                     
 			                 "firstName": "Daniel",
@@ -513,11 +513,11 @@
 			"dateOfFlight": "October/04/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Airbus",
+			         "model": "A380",
+			         "capacity": 300,
                         "pilot":{
                     
 			                 "firstName": "Jill",
@@ -536,11 +536,11 @@
 			"dateOfFlight": "September/14/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Boeing",
+			         "model": "727",
+			         "capacity": 189,
                         "pilot":{
                     
 			                 "firstName": "Calvin",
@@ -559,11 +559,11 @@
 			"dateOfFlight": "March/5/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                      "make": "Boeing",
+			         "model": "767",
+			         "capacity": 375,
                         "pilot":{
                     
 			                 "firstName": "jack",
@@ -582,11 +582,11 @@
 			"dateOfFlight": "July/10/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                     "make": "Boeing",
+			         "model": "757",
+			         "capacity": 239,
                         "pilot":{
                     
 			                 "firstName": "Paul",
@@ -605,11 +605,11 @@
 			"dateOfFlight": "May/04/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Airbus",
+			         "model": "A380",
+			         "capacity": 260,
                         "pilot":{
                     
 			                "firstName": "Daniel",
@@ -625,14 +625,14 @@
 			"destination": "Rome",
 			"departureTime": "15:20",
 			"arrivalTime": "18:00",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "April/8/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                      "make": "Boeing",
+			         "model": "737",
+			         "capacity": 149,
                         "pilot":{
                     
 			                 "firstName": "Tony",
@@ -648,14 +648,14 @@
 			"destination": "London",
 			"departureTime": "09:00",
 			"arrivalTime": "10:27",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "August/25/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Boeing",
+			         "model": "787",
+			         "capacity": 335,
                         "pilot":{
                     
 			                "firstName": "Steve",
@@ -671,14 +671,14 @@
 			"destination": "Paris",
 			"departureTime": "09:00",
 			"arrivalTime": "16:27",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "February/28/2019",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Boeing",
+			         "model": "787",
+			         "capacity": 335,
                         "pilot":{
                     
 			                 "firstName": "jack",
@@ -694,14 +694,14 @@
 			"destination": "Paris",
 			"departureTime": "2:00",
 			"arrivalTime": "3:27",
-			"dateOfFlight": "10/04/2019",
+			"dateOfFlight": "May/12/2021",
             
 			"aircraftAssigned":{
-                "type":"Helicopter",
+                "type":"AirPlane",
                 "properties":{
-                    "make": "Agustawestland",
-			         "model": "BA609",
-			         "capacity": 15,
+                    "make": "Boeing",
+			         "model": "727",
+			         "capacity": 189,
                         "pilot":{
                     
 			                 "firstName": "Mark",

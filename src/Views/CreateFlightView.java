@@ -12,10 +12,12 @@ import Repositorys.DataStore;
 
 public class CreateFlightView extends View
 {
+
     // Declare a user
     User user;
-    
+
     int maxNumFlightsUserCanEnter = 5;
+
     public CreateFlightView(FlightController controller, User user)
     {
         this.controller = controller;
@@ -26,7 +28,7 @@ public class CreateFlightView extends View
     }
 
     /**
-     *Generates the display for the view
+     * Generates the display for the view
      */
     @Override
     public void RenderView()
@@ -35,7 +37,7 @@ public class CreateFlightView extends View
         System.out.println("\n//////////////////////////////////////////////////////////////////////////\n");
         System.out.println(this.name);
 
-        if (user.getNumberOfFlightsEntered() >= maxNumFlightsUserCanEnter )
+        if (user.getNumberOfFlightsEntered() >= maxNumFlightsUserCanEnter)
         {
             System.out.println("You have enetered 5 flights already");
         } else
@@ -44,31 +46,28 @@ public class CreateFlightView extends View
             int MinFlightDay = 1;
             Flight flight = new Flight();
 
-           
-
             System.out.println("\nSelect aircraft from menu.  You have the option of choosing either a airplane or a helicopter.\n");
 
             PrintList(controller.GetAircrafts());
 
-            flight.setAircraftAssigned(controller.GetAircrafts().get(GetValidInt(1,controller.GetAircrafts().size())-1));
+            flight.setAircraftAssigned(controller.GetAircrafts().get(GetValidInt(1, controller.GetAircrafts().size()) - 1));
 
             PrintList(controller.GetPilots());
 
-            flight.getAircraftAssigned().AssignPilot(controller.GetPilots().get(GetValidInt(1,controller.GetPilots().size())-1));
-
+            flight.getAircraftAssigned().AssignPilot(controller.GetPilots().get(GetValidInt(1, controller.GetPilots().size()) - 1));
 
             DataStore dataStore = new DataStore();
 
             boolean isValid = false;
 
             String originalLocation;
-            
+
             System.out.println("\nAvailable Locations: ");
-            for(String location: dataStore.locations){
+            for (String location : dataStore.locations)
+            {
                 System.out.println(location);
             }
-            
-            
+
             do
             {
                 originalLocation = StringAsker.ask("\nEnter ORIGIN of flight: ");
@@ -76,27 +75,26 @@ public class CreateFlightView extends View
                 {
                     if (originalLocation.equalsIgnoreCase(location))
                     {
-                       
+
                         isValid = true;
                         break;
                     }
                 }
-               
+
             } while (isValid == false);
 
             flight.setOrigin(originalLocation);
 
-
-
             isValid = false;
 
             String destinationLocation;
-            
+
             System.out.println("\nAvailable Locations: ");
-            for(String location: dataStore.locations){
+            for (String location : dataStore.locations)
+            {
                 System.out.println(location);
             }
-            
+
             do
             {
                 destinationLocation = StringAsker.ask("\nEnter DESTINATION of flight: ");
@@ -113,7 +111,7 @@ public class CreateFlightView extends View
 
                     if (destinationLocation.equalsIgnoreCase(location))
                     {
-                        
+
                         isValid = true;
                         break;
                     }
@@ -142,10 +140,7 @@ public class CreateFlightView extends View
 
             flight.setDateOfFlight(Date);
 
-
             System.out.println("One moment as we validate your entered flight");
-
-
 
             controller.AddFlight(flight);
             user.IncreaseNumberOfFlightsEntered();
@@ -153,6 +148,4 @@ public class CreateFlightView extends View
             System.out.println("Your flight has been recorded\n");
         }
     }
-
-    
 }

@@ -1,13 +1,15 @@
 /**
- * 
+ *
  */
-
 package Input;
+
 import java.util.Scanner;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-public class IntegerAsker {
+public class IntegerAsker
+{
+
     // Set up a Scanner.
     private final Scanner scanner;
     // Set up a PrintStream
@@ -38,10 +40,5 @@ public class IntegerAsker {
             }
             return scanner.nextInt();
         }
-  
-        
-        
-        
     }
 }
-

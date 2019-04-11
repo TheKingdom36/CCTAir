@@ -4,10 +4,13 @@
  * and open the template in the editor.
  */
 package Repositorys;
+
 import java.util.ArrayList;
+
 /**
  *
  * @author Daniel Murphy
+ * @param <T>
  */
 public interface IRepository<T> {
     void AddItem(T t);

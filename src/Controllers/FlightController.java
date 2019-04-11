@@ -48,14 +48,12 @@ public class FlightController
      * Adds a flight to the flights repository if the flight is accepted
      *
      * @param flight The flight to be added to the repository
-     * 
+     *
      */
     public void AddFlight(Flight flight)
     {
-        
-            flights.AddItem(flight);
-            
-       
+
+        flights.AddItem(flight);
     }
 
     /**
@@ -63,12 +61,12 @@ public class FlightController
      * String parameter
      *
      * @param Origin The origin of the requested flights
-     * 
+     * @return
+     *
      */
     public ArrayList<Flight> FindFlights(String Origin)
     {
         ArrayList<Flight> MatchingFlights = new ArrayList<>();
-      
 
         for (int i = 0; i < flights.GetList().size(); i++)
         {
@@ -79,7 +77,7 @@ public class FlightController
         }
         return MatchingFlights;
     }
-    
+
     /**
      * Returns an ArrayList of Aircrafts
      */
@@ -95,5 +93,4 @@ public class FlightController
     {
         return this.pilots.GetList();
     }
-
 }

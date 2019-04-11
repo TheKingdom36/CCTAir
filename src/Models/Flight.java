@@ -5,29 +5,28 @@
  */
 package Models;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Stephen
  */
 public class Flight
 {
+
+    // Declaring multiple variables
     private String origin;
     private String destination;
-    private String  departureTime;
+    private String departureTime;
     private String arrivalTime;
     private String dateOfFlight;
     private Aircraft aircraftAssigned;
-    
-  
-    
+
+    // Flight Constructor that takes not arguments
     public Flight()
     {
-    
+
     }
 
-
+    // Flight Constructor that takes in origin, destination, dateOfFlight and aircraftAssigned as arguments.
     public Flight(String origin, String destination, String dateOfFlight, Aircraft aircraftAssigned)
     {
         this.origin = origin;
@@ -36,6 +35,7 @@ public class Flight
         this.aircraftAssigned = aircraftAssigned;
     }
 
+    // Flight constructor that takes in all arguments.
     public Flight(String origin, String destination, String departureTime, String arrivalTime, String dateOfFlight, Aircraft aircraftAssigned)
     {
         this.origin = origin;
@@ -45,8 +45,6 @@ public class Flight
         this.dateOfFlight = dateOfFlight;
         this.aircraftAssigned = aircraftAssigned;
     }
-    
-    
 
     public String getOrigin()
     {
@@ -93,8 +91,6 @@ public class Flight
         this.departureTime = departureTime;
     }
 
-   
-
     public void setDateOfFlight(String dateOfFlight)
     {
         this.dateOfFlight = dateOfFlight;
@@ -104,44 +100,34 @@ public class Flight
     {
         this.aircraftAssigned = aircraftAssigned;
     }
-    
+
     public void Schedule(String arrivalTime)
     {
         this.arrivalTime = arrivalTime;
     }
-    
+
     public void Schedule(String arrivalTime, String departureTime)
     {
         this.arrivalTime = arrivalTime;
         this.departureTime = departureTime;
     }
-    
-    
-    
-/**
- *Returns details of the aircraft as a string
- */
- @Override
+
+    /**
+     * Returns details of the aircraft as a string
+     *
+     * @return
+     */
+    @Override
     public String toString()
     {
-        
-       
         return String.format("\nFlight Information:\nDate: %s\nFrom: "
                 + "%s\nto: %s\nDeparture Time: %s\narrival time: %s\nPlane "
                 + "Information: Aircraft: %s %s Capacity: %s seats Pilot: First "
-                + "Name: %s Surname: %s Age: %d Rank: %s\n", dateOfFlight, 
-                origin, destination, departureTime, arrivalTime, 
-                aircraftAssigned.getMake(), aircraftAssigned.getModel(), 
+                + "Name: %s Surname: %s Age: %d Rank: %s\n", dateOfFlight,
+                origin, destination, departureTime, arrivalTime,
+                aircraftAssigned.getMake(), aircraftAssigned.getModel(),
                 aircraftAssigned.getCapacity(), aircraftAssigned.getPilot().getFirstName(),
                 aircraftAssigned.getPilot().getSurname(), aircraftAssigned.getPilot().getAge(),
                 aircraftAssigned.getPilot().getRank());
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Input;
+
 import java.util.Scanner;
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -12,10 +13,10 @@ import java.io.PrintStream;
  *
  * @author Daniel Murphy
  */
-
-
-public class StringAsker {
-   // Set up a Scanner.
+public class StringAsker
+{
+    
+    // Set up a Scanner.
     private final Scanner scanner;
     // Set up a PrintStream.
     private final PrintStream out;

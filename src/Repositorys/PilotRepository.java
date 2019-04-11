@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Repositorys;
+
 import Models.AirPlane;
 import java.util.ArrayList;
 import Models.Pilot;
@@ -15,50 +16,48 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
- 
+
 /**
  *
  * @author Daniel Murphy
  */
-public class PilotRepository extends TextFileRepository<Pilot>{
-    
+public class PilotRepository extends TextFileRepository<Pilot>
+{
+
     public void PilotRepository()
     {
-     this.items = new ArrayList<>(); 
-     
+        this.items = new ArrayList<>();
     }
-    
-    public PilotRepository(String[] fileNames){
-        this.items = new ArrayList<>(); 
+
+    public PilotRepository(String[] fileNames)
+    {
+        this.items = new ArrayList<>();
         CreateFromFiles(fileNames);
     }
-    
-     /**
-   *Takes in multiple files and adds there contents to the repository
-   * 
-   * @param fileNames The files whos contents are to added to repository
-   */
+
+    /**
+     * Takes in multiple files and adds there contents to the repository
+     *
+     * @param fileNames The files whos contents are to added to repository
+     */
     @Override
-     protected void CreateFromFiles(String[] fileNames){
-        
-          Gson gs = new Gson();
+    protected void CreateFromFiles(String[] fileNames)
+    {
+        Gson gs = new Gson();
         BufferedReader reader;
-        try{
-            for(String fileName : fileNames){
-                reader = new BufferedReader(new FileReader(fileName)); 
-              
+        try
+        {
+            for (String fileName : fileNames)
+            {
+                reader = new BufferedReader(new FileReader(fileName));
+
                 Pilot[] pilots = gs.fromJson(reader, Pilot[].class);
-          
+
                 items.addAll(Arrays.asList(pilots));
             }
-            
-        }catch(JsonIOException | JsonSyntaxException | FileNotFoundException e){
-           System.out.print(e.toString());
+        } catch (JsonIOException | JsonSyntaxException | FileNotFoundException e)
+        {
+            System.out.print(e.toString());
         }
-         
     }
-
-
-    
-    
 }

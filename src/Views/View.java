@@ -38,6 +38,7 @@ public abstract class View
             System.out.println(i + 1 + ". " + items.get(i).toString() + "\n");
         }
     }
+    
     /**
      *Takes an array of items and displays each items toString to the user
      * 
@@ -73,6 +74,5 @@ public abstract class View
         } while (EnteredValue > MaxValue || EnteredValue < MinValue);
 
         return EnteredValue;
-    }
-   
+    }  
 }

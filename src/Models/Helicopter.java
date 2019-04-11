@@ -10,21 +10,21 @@ package Models;
  */
 public class Helicopter extends Aircraft
 {
-   
 
-    public Helicopter(String make, String model, int capacity, Pilot pilot) {
+    // Helicopter Constructor
+    public Helicopter(String make, String model, int capacity, Pilot pilot)
+    {
         super(make, model, capacity, pilot);
     }
-    
-    
-    
+
     /**
-    *Returns details of the aircraft as a string
-    */
+     * Returns details of the aircraft as a string
+     *
+     * @return
+     */
     @Override
     public String toString()
     {
-        return String.format("Helicopter Information: Helicopter: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot().getFirstName()+" "+getPilot().getSurname());
-   }
+        return String.format("Helicopter Information: Helicopter: %s %s Capacity: %d seats, Pilot: %s", getMake(), getModel(), getCapacity(), getPilot().getFirstName() + " " + getPilot().getSurname());
+    }
 }
-

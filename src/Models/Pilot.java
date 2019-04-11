@@ -11,17 +11,20 @@ package Models;
  */
 public class Pilot
 {
+    // Declaring multiple variables
     private String firstName;
     private String surname;
     private String rank;
     private int age;
     private boolean isAvailable;
     
+    // Pilot Constructor that takes in no arguments.
     public Pilot()
     {
     
     }
     
+    // Pilot Constructor that takes in all arguments.
     public Pilot(String firstName, String surname, String rank, int age, boolean isAvailable)
     {
         this.firstName   = firstName;
@@ -83,12 +86,13 @@ public class Pilot
 
     /**
     *Returns details of the aircraft as a string
+     * @return 
     */
     @Override
     public String toString()
     {
-        return "Pilot{" + "firstName=" + firstName + ", surname=" + surname + ", rank=" + rank + ", age=" + age + ", isAvailable=" + isAvailable + '}';
-    }
-    
-    
+        return String.format("Pilot Information:\nFirst Name: %s\nSurname: %s\nRank: %s\nAge: %s\nPilot availability: %s", firstName, 
+                                surname, rank, age, isAvailable);
+        //return "Pilot{" + "firstName=" + firstName + ", surname=" + surname + ", rank=" + rank + ", age=" + age + ", isAvailable=" + isAvailable + '}';
+    }   
 }

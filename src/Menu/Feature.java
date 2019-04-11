@@ -5,15 +5,16 @@
  */
 package Menu;
 
-
 import Views.View;
+
 /**
  *
  * @author Daniel Murphy
  */
-public class Feature {
-  
-      // Declare a variable called "ItemName".
+public class Feature
+{
+
+    // Declare a variable called "ItemName".
     protected String ItemName;
     // Declare a View called "view".
     protected View view;

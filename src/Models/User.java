@@ -9,42 +9,31 @@ package Models;
  *
  * @author Abraham Ehuiaka
  */
-public class User {
+public class User
+{
+
     private String name;
-    private String id; 
+    private String id;
     private int numOfFlightsEntered = 0;
-     
-    static {
-    
-    }
-    public User(String name,String id){
-    
+
+    public User(String name, String id)
+    {
         this.name = name;
         this.id = id;
-        
-        
     }
-    
-    
-    public String getName(){
-        return name; 
+
+    public String getName()
+    {
+        return name;
     }
-    
-    public int getNumberOfFlightsEntered(){
+
+    public int getNumberOfFlightsEntered()
+    {
         return this.numOfFlightsEntered;
     }
-    
-            
-       public void IncreaseNumberOfFlightsEntered(){
-           numOfFlightsEntered++;
-       }     
-            
-           
-       public void example(){
-          
-          
-       }
-            
+
+    public void IncreaseNumberOfFlightsEntered()
+    {
+        numOfFlightsEntered++;
+    }
 }
-
-
